@@ -1,0 +1,1168 @@
+@charset "utf-8";
+
+.main-visual {
+  position:relative;
+  &:after {
+    @include after-position(auto,50%,48px,48px);
+    bottom:48px;
+    background:url('/images/common/ic-down-arrow.png') no-repeat left top;
+    background-size:100%;
+    @include transform(translate(-50%,0));
+    z-index:1;
+  }
+  .text-box {
+    position:absolute;
+    top:256px;
+    left:vw(360px);
+    right:0;
+  }
+  h2 {
+    font-size:144px;
+    font-weight:500;
+    color:$default-c2;
+    line-height:180px;
+    letter-spacing:-7.2px;
+  }
+  .text {
+    margin-top:120px;
+    font-size:18px;
+    color:$default-c2;
+    line-height:30px;
+    letter-spacing:-0.18px;
+    opacity:.8;
+  }
+  .text-detail {
+    display:inline-block;
+    margin-top:32px;
+    font-size:20px;
+    color:$default-c2;
+    line-height:24px;
+    text-decoration:underline;
+  }
+  .information {
+    position:absolute;
+    top:450px;
+    left:1112px;
+    .area {
+      color:$default-c2;
+      & + .area {
+        margin-top:32px;
+      }
+      em {
+        display:block;
+        margin-top:-8px;
+        font-size:16px;
+        line-height:27px;
+        letter-spacing:-.16px;
+      }
+      span {
+        font-size:48px;
+        font-weight:500;
+        letter-spacing:-.96px;
+      }
+    }
+  }
+  .swiper-container {
+    .swiper-pagination {
+      bottom:128px;
+      font-size:0;
+      line-height:0;
+      &-bullet {
+        width:16px;
+        height:16px;
+        margin:0 5px;
+        background:$default-c10;
+        opacity:.6;
+        &-active {
+          background:$point-c1;
+          opacity:1;
+        }
+      }
+    }
+  }
+}
+
+.csr-index {
+  padding:132px 0 96px vw(360px);
+  h2 {
+    font-size:56px;
+    font-weight:500;
+    color:$default-c3;
+    letter-spacing:-2.8px;
+  }
+  .title {
+    display:block;
+    margin-top:20px;
+    font-size:20px;
+    color:$default-c1;
+    line-height:34px;
+    letter-spacing:-1px;
+  }
+  .text {
+    display:block;
+    margin-top:2px;
+    font-size:14px;
+    color:$default-c4;
+    line-height:23px;
+    letter-spacing:-.7px;
+  }
+  .swiper-container {
+    margin-top:40px;
+    .swiper-slide {
+      width:33.3333333%;
+      margin-right:30px;
+    }
+  }
+}
+.project-index {
+  position:relative;
+  padding:204px 0 0;
+  .tab-project {
+    .tab-list {
+      position:absolute;
+      top:124px;
+      right:103px;
+      text-align:right;
+      z-index:2;
+      button {
+        font-size:128px;
+        color:$default-c9;
+        line-height:128px;
+        letter-spacing:-6.4px;
+        &[aria-selected="true"] {
+          color:$point-c3;
+        }
+      }
+      > span {
+        display:block;
+        & + span {
+          margin-top:16px;
+        }
+      }
+    }
+  }
+  .tab-content {
+    position:relative;
+    max-width:vw(1200px);
+    margin:0 auto;
+    .message {
+      display:block;
+      margin-top:16px;
+      font-size:56px;
+      font-weight:500;
+      color:$default-c3;
+      letter-spacing:-2.8px;
+    }
+    .name {
+      position:absolute;
+      right:0;
+      bottom:48px;
+      font-size:16px;
+      color:$default-c1;
+      line-height:27px;
+    }
+  }
+}
+.project-result {
+  position:relative;
+  margin-top:115px;
+  padding-bottom:120px;
+  &:before {
+    @include after-position(80px,0,100%,auto);
+    border:1px dashed $default-c6;
+  }
+  > ul {
+    max-width:vw(1200px);
+    margin:0 auto;
+    @include clearfix;
+    li {
+      position:relative;
+      float:left;
+      width:25%;
+      padding-top:165px;
+      text-align:center;
+      &:before {
+        @include after-position(0,50%,143px,143px);
+        @include border-radius(100%);
+        @include transform(translate(-50%,0));
+        border:4px solid $default-c8;
+        background:$default-c2;
+        @include box-sizing;
+      }
+      &:after {
+        @include after-position(32px,50%,80px,80px);
+        @include transform(translate(-50%,0));
+        background:url('/images/main/ic-project01.svg') no-repeat left top;
+        background-size:100%;
+      }
+      &.construct {
+        &:after {
+          background:url('../images/main/ic-project02.svg') no-repeat left top;
+          background-size:100%;
+        }
+      }
+      &.civil-engineering {
+        &:after {
+          background:url('/images/main/ic-project03.svg') no-repeat left top;
+          background-size:100%;
+        }
+      }
+      &.leisure {
+        &:after {
+          background:url('/images/main/ic-project04.svg') no-repeat left top;
+          background-size:100%;
+        }
+      }
+      .title, .number {
+        display:block;
+        color:$default-c3;
+      }
+      .title {
+        font-size:24px;
+        font-weight:500;
+        line-height:30px;
+        letter-spacing:-1.2px;
+      }
+      .number {
+        margin-top:2px;
+        font-size:56px;
+        font-weight: 700;
+        letter-spacing:-1.12px;
+        span {
+          font-weight:700;
+        }
+      }
+    }
+  }
+}
+.lifestyle-section {
+  position:relative;
+  .inner {
+    position:absolute;
+    top:50%;
+    left:50%;
+    max-width:vw(785px);
+    margin:0 auto;
+    @include transform(translate(-50%,-50%));
+  }
+  h2 {
+    position:relative;
+    padding-bottom:123px;
+    font-size:72px;
+    font-weight:500;
+    color:$default-c2;
+    line-height:96px;
+    letter-spacing:-4px;
+    &:before,
+    &:after {
+      position:absolute;
+      font-size:72px;
+      font-weight:500;
+      color:$default-c2;
+      line-height:98px;
+    }
+    &:before {
+      left:0;
+      bottom:20px;
+      content:'“';
+    }
+    &:after {
+      right:0;
+      bottom:47px;
+      @include transform(rotate(180deg));
+      content:'“';
+    }
+    span {
+      position:absolute;
+      top:14px;
+      right:0;
+      font-size:16px;
+      font-weight:400;
+      line-height:normal;
+      letter-spacing:0;
+    }
+  }
+  .text {
+    position:relative;
+    padding-top:32px;
+    border-top:2px solid $default-c2;
+    font-size:18px;
+    color:$default-c2;
+    line-height:26px;
+    letter-spacing:-0.36px;
+    opacity:.8;
+  }
+}
+
+// main layer popup
+.layer {
+  &.index-popup {
+    background:rgba(0,0,0,.2);
+    z-index:99;
+    .layer-wrap {
+      position:absolute;
+      top:50%;
+      left:50%;
+      min-width:inherit;
+      max-width:450px;
+      width:100%;
+      max-height:580px;
+      height:100%;
+      padding:0;
+      background:$default-c2;
+      @include transform(translate(-50%,-50%));
+      .layer-content {
+        min-width:inherit;
+        height:100%;
+      }
+    }
+    .popup-box {
+      position:absolute;
+      top:0;
+      left:0;
+      bottom:127px;
+      right:0;
+      overflow-y:auto;
+    }
+    .text-box {
+      padding:24px 24px 0;
+    }
+    .layer-title {
+      font-size:20px;
+      font-weight:500;
+      color:$default-c1;
+      line-height:28px;
+      letter-spacing:-1px;
+    }
+    .layer-text {
+      margin-top:16px;
+      font-size:16px;
+      color:$default-c5;
+      line-height:22px;
+      letter-spacing:-.8px;
+    }
+    .detail-view {
+      position:absolute;
+      bottom:77px;
+      left:0;
+      right:0;
+      text-align:center;
+      a {
+        display:inline-block;
+        font-size:16px;
+        color:#666;
+        line-height:27px;
+        letter-spacing:-.16px;
+        text-decoration:underline;
+      }
+    }
+    .today-close {
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      display:flex;
+      height:52px;
+      background:#e0e0e0;
+      padding:0 24px;
+      align-items:center;
+      .chk-box {
+        padding-left:28px;
+        font-size:0;
+        input[type="checkbox"] {
+          width:20px;
+          height:20px;
+          border-radius: 0;
+          &:checked {
+            &:before {
+              width:20px;
+              height:20px;
+              background:$point-c1 url("/images/common/ic-check-active.png") no-repeat left top;
+              background-size:100%;
+            }
+          }
+        }
+
+        label {
+          font-size: 16px;
+          line-height: 27px;
+        }
+      }
+    }
+    .close {
+      position:absolute;
+      top:auto;
+      bottom:16px;
+      right:24px;
+      display:block;
+      width:20px;
+      height:20px;
+      background:url('/images/main/index-layer-close.png') no-repeat left top;
+      background-size:100%;
+      z-index:1;
+    }
+  }
+}
+
+@media all and (max-width:1920px) {
+  .main-visual {
+    position:relative;
+    &:after {
+      @include after-position(auto,50%,48px,48px);
+      bottom:vw(36px);
+      background:url('/images/common/ic-down-arrow.png') no-repeat left top;
+      background-size:100%;
+      @include transform(translate(-50%,0));
+    }
+    .text-box {
+      position:absolute;
+      top:vw(256px);
+      left:vw(360px);
+      right:0;
+    }
+    h2 {
+      font-size:vw(144px);
+      font-weight:500;
+      color:$default-c2;
+      line-height:vw(180px);
+      letter-spacing:vw(-7.2px);
+    }
+    .text {
+      margin-top:vw(120px);
+      font-size:vw(18px);
+      color:$default-c2;
+      line-height:vw(30px);
+      letter-spacing:vw(-0.18px);
+      opacity:.8;
+    }
+    .text-detail {
+      display:inline-block;
+      margin-top:vw(32px);
+      font-size:vw(20px);
+      color:$default-c2;
+      line-height:vw(24px);
+      text-decoration:underline;
+    }
+    .information {
+      position:absolute;
+      top:vw(450px);
+      left:vw(1112px);
+      /*&.vertical {
+        display:flex;
+        .area {
+          margin:0;
+          & + .area {
+            position:relative;
+            margin:0 0 0 vw(29px);
+            padding-left:vw(31px);
+            &:before {
+              position:absolute;
+              top:vw(15px);
+              left:0;
+              display:block;
+              width:vw(2px);
+              height:vw(71px);
+              background:$default-c2;
+              content:'';
+            }
+          }
+        }
+      }*/
+      .area {
+        color:$default-c2;
+        & + .area {
+          margin-top:vw(32px);
+        }
+        em {
+          display:block;
+          margin-top:vw(-8px);
+          font-size:vw(16px);
+          line-height:vw(27px);
+          letter-spacing:vw(-.16px);
+        }
+        span {
+          font-size:vw(48px);
+          font-weight:500;
+          letter-spacing:vw(-.96px);
+        }
+      }
+    }
+    .swiper-container {
+      .swiper-pagination {
+        bottom:vw(128px);
+      }
+    }
+  }
+
+  .csr-index {
+    padding:vw(132px) 0 vw(96px) vw(360px);
+    h2 {
+      font-size:vw(56px);
+      font-weight:500;
+      color:$default-c3;
+      letter-spacing:vw(-2.8px);
+    }
+    .title {
+      display:block;
+      margin-top:vw(20px);
+      font-size:vw(20px);
+      color:$default-c1;
+      line-height:vw(34px);
+      letter-spacing:vw(-1px);
+    }
+    .text {
+      display:block;
+      margin-top:vw(2px);
+      font-size:vw(14px);
+      color:$default-c4;
+      line-height:vw(23px);
+      letter-spacing:vw(-.7px);
+    }
+    .swiper-container {
+      margin-top:vw(40px);
+      .swiper-slide {
+        width:33.3333333%;
+        margin-right:vw(30px);
+      }
+    }
+  }
+  .project-index {
+    position:relative;
+    padding:vw(204px) 0 0;
+    .tab-project {
+      .tab-list {
+        position:absolute;
+        top:vw(124px);
+        right:vw(103px);
+        text-align:right;
+        z-index:2;
+        button {
+          font-size:vw(128px);
+          color:$default-c9;
+          line-height:vw(128px);
+          letter-spacing:vw(-6.4px);
+          &[aria-selected="true"] {
+            color:$point-c3;
+          }
+        }
+        > span {
+          display:block;
+          & + span {
+            margin-top:vw(16px);
+          }
+        }
+      }
+    }
+    .tab-content {
+      position:relative;
+      max-width:vw(1200px);
+      margin:0 auto;
+      .message {
+        display:block;
+        margin-top:vw(16px);
+        font-size:vw(56px);
+        font-weight:500;
+        color:$default-c3;
+        letter-spacing:vw(-2.8px);
+      }
+      .name {
+        position:absolute;
+        right:0;
+        bottom:vw(48px);
+        font-size:vw(16px);
+        color:$default-c1;
+        line-height:vw(27px);
+      }
+    }
+  }
+  .project-result {
+    position:relative;
+    margin-top:vw(115px);
+    padding-bottom:vw(120px);
+    &:before {
+      @include after-position(vw(80px),0,100%,auto);
+      border:1px dashed $default-c6;
+    }
+    > ul {
+      max-width:vw(1200px);
+      margin:0 auto;
+      @include clearfix;
+      li {
+        position:relative;
+        float:left;
+        width:25%;
+        padding-top:vw(165px);
+        text-align:center;
+        &:before {
+          @include after-position(0,50%,vw(143px),vw(143px));
+          @include border-radius(100%);
+          @include transform(translate(-50%,0));
+          border:4px solid $default-c8;
+          background:$default-c2;
+          @include box-sizing;
+        }
+        &:after {
+          @include after-position(vw(32px),50%,vw(80px),vw(80px));
+          @include transform(translate(-50%,0));
+          background:url('/images/main/ic-project01.svg') no-repeat left top;
+          background-size:100%;
+        }
+        &.construct {
+          &:after {
+            background:url('../images/main/ic-project02.svg') no-repeat left top;
+            background-size:100%;
+          }
+        }
+        &.civil-engineering {
+          &:after {
+            background:url('/images/main/ic-project03.svg') no-repeat left top;
+            background-size:100%;
+          }
+        }
+        &.leisure {
+          &:after {
+            background:url('/images/main/ic-project04.svg') no-repeat left top;
+            background-size:100%;
+          }
+        }
+        .title, .number {
+          display:block;
+          color:$default-c3;
+        }
+        .title {
+          font-size:vw(24px);
+          font-weight:500;
+          line-height:vw(30px);
+          letter-spacing:vw(-1.2px);
+        }
+        .number {
+          margin-top:vw(2px);
+          font-size:vw(56px);
+          font-weight: 700;
+          letter-spacing:vw(-1.12px);
+        }
+      }
+    }
+  }
+  .lifestyle-section {
+    position:relative;
+    .inner {
+      position:absolute;
+      top:50%;
+      left:50%;
+      max-width:vw(785px);
+      margin:0 auto;
+      @include transform(translate(-50%,-50%));
+    }
+    h2 {
+      position:relative;
+      padding-bottom:vw(123px);
+      font-size:vw(72px);
+      font-weight:500;
+      color:$default-c2;
+      line-height:vw(96px);
+      letter-spacing:vw(-4px);
+      &:before,
+      &:after {
+        position:absolute;
+        font-size:vw(72px);
+        font-weight:500;
+        color:$default-c2;
+        line-height:vw(98px);
+      }
+      &:before {
+        left:0;
+        bottom:20px;
+        content:'“';
+      }
+      &:after {
+        right:0;
+        bottom:47px;
+        @include transform(rotate(180deg));
+        content:'“';
+      }
+      span {
+        position:absolute;
+        top:vw(14px);
+        right:0;
+        font-size:vw(16px);
+        font-weight:400;
+        line-height:normal;
+        letter-spacing:0;
+      }
+    }
+    .text {
+      position:relative;
+      padding-top:vw(32px);
+      border-top:2px solid $default-c2;
+      font-size:vw(18px);
+      color:$default-c2;
+      line-height:vw(26px);
+      letter-spacing:vw(-0.36px);
+      opacity:.8;
+    }
+  }
+
+  // main layer popup
+  .layer {
+    &.index-popup {
+      background:rgba(0,0,0,.2);
+      z-index:99;
+      .layer-wrap {
+        position:absolute;
+        left:50%;
+        min-width:inherit;
+        max-width:450px;
+        width:100%;
+        padding:0;
+        background:$default-c2;
+        .layer-content {
+          height:100%;
+        }
+      }
+      .popup-box {
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:vw(127px);
+        right:0;
+        overflow-y:auto;
+      }
+      .text-box {
+        padding:vw(24px) vw(24px) 0;
+      }
+      .layer-title {
+        font-size:vw(20px);
+        font-weight:500;
+        color:$default-c1;
+        line-height:vw(28px);
+        letter-spacing:-1px;
+      }
+      .layer-text {
+        margin-top:vw(16px);
+        font-size:vw(16px);
+        color:$default-c5;
+        line-height:vw(22px);
+        letter-spacing:-.8px;
+      }
+      .detail-view {
+        position:absolute;
+        bottom:vw(77px);
+        left:0;
+        right:0;
+        text-align:center;
+        a {
+          display:inline-block;
+          font-size:vw(16px);
+          color:#666;
+          line-height:vw(27px);
+          letter-spacing:-.16px;
+          text-decoration:underline;
+        }
+      }
+      .today-close {
+        position:absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        display:flex;
+        height:vw(52px);
+        background:#e0e0e0;
+        padding:0 vw(24px);
+        align-items:center;
+        .chk-box {
+          padding-left:vw(28px);
+          font-size:0;
+          input[type="checkbox"] {
+            top:50%;
+            width:vw(20px);
+            height:vw(20px);
+            border-radius: 0;
+            @include transform(translate(0,-50%));
+            &:checked {
+              &:before {
+                width:vw(20px);
+                height:vw(20px);
+                background:$point-c1 url("/images/common/ic-check-active.png") no-repeat left top;
+                background-size:100%;
+              }
+            }
+          }
+
+          label {
+            font-size: vw(16px);
+            line-height: vw(27px);
+          }
+        }
+      }
+      .close {
+        position:absolute;
+        top:auto;
+        bottom:vw(16px);
+        right:vw(24px);
+        display:block;
+        width:vw(20px);
+        height:vw(20px);
+        background:url('/images/main/index-layer-close.png') no-repeat left top;
+        background-size:100%;
+        z-index:1;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .main-visual {
+    &:after {
+      @include after-position(auto,50%,2.6rem,1.7rem);
+      bottom:4rem;
+      background:url('/images/common/ic-down-arrow-m.png') no-repeat left top;
+      background-size:100%;
+    }
+    .text-box {
+      position:absolute;
+      top:13.6rem;
+      left:2.4rem;
+      right:2.4rem;
+    }
+    h2 {
+      font-size:5.4rem;
+      line-height:6.6rem;
+      letter-spacing:-.27rem;
+    }
+    .text {
+      margin-top:4rem;
+      font-size:1.6rem;
+      line-height:2.2rem;
+      letter-spacing:-.08rem;
+    }
+    .link {
+      margin-top:4rem;
+      font-size:1.8rem;
+      line-height:2rem;
+      letter-spacing:-.09rem;
+    }
+    .information {
+      top:44.6rem;
+      left:auto;
+      right:4.6rem;
+      .area {
+        & + .area {
+          margin-top:1.9rem;
+        }
+        em {
+          margin:0;
+          font-size:1.4rem;
+          line-height:2rem;
+          letter-spacing:-.07rem;
+        }
+        span {
+          font-size:2.4rem;
+          line-height:3rem;
+          letter-spacing:-0.12rem;
+        }
+      }
+    }
+    .swiper-container {
+      .swiper-pagination {
+        bottom:8rem;
+        &-bullet {
+          width:1.2rem;
+          height:1.2rem;
+          margin:0 .3rem;
+        }
+      }
+    }
+  }
+  .csr-index {
+    position:relative;
+    padding:11.8rem 0 11.2rem 2.4rem;
+    &:after {
+      @include after-position(auto,50%,2.6rem,1.7rem);
+      bottom:3rem;
+      background:url('/images/common/ic-down-arrow-m02.png') no-repeat left top;
+      background-size:100%;
+    }
+    h2 {
+      font-size:3.6rem;
+      line-height:4.8rem;
+      letter-spacing:-.18rem;
+    }
+    .title {
+      margin-top:2rem;
+      font-size:2rem;
+      line-height:2.8rem;
+      letter-spacing:-.01rem;
+    }
+    .text {
+      margin-top:.8rem;
+      font-size:1.4rem;
+      line-height:2rem;
+      letter-spacing:-.07rem;
+    }
+    .swiper-container {
+      .swiper-slide {
+        width:71.225070%;
+        & + .swiper-slide {
+          margin-right:2.2rem;
+        }
+      }
+    }
+  }
+  .project-index {
+    position:relative;
+    padding:10rem 2.4rem 11.6rem;
+    &:after {
+      @include after-position(auto,50%,2.6rem,1.7rem);
+      bottom:3rem;
+      background:url('/images/common/ic-down-arrow-m02.png') no-repeat left top;
+      background-size:100%;
+      @include transform(translate(-50%,0));
+    }
+    .tab-project {
+      .tab-list {
+        top:10rem;
+        right:1.6rem;
+        text-align:right;
+        button {
+          font-size:5.2rem;
+          line-height:6.8rem;
+          letter-spacing:-0.26rem;
+          &[aria-selected="true"] {
+          }
+        }
+        > span {
+          & + span {
+            margin-top:.4rem;
+          }
+        }
+      }
+    }
+    .tab-content {
+      max-width:100%;
+      .message {
+        display:block;
+        margin-top:1.6rem;
+        font-size:3.6rem;
+        line-height:4.8rem;
+        letter-spacing:-0.18px;
+      }
+      .name {
+        position:static;
+        display:block;
+        margin-bottom:2rem;
+        font-size:1.6rem;
+        line-height:2.2rem;
+        letter-spacing:-.08rem;
+      }
+      .mobile-only {
+        margin-bottom:2rem;
+      }
+    }
+  }
+  .project-result {
+    margin-top:7rem;
+    padding:0 2.4rem 15.2rem;
+    &:before {
+      display:none;
+    }
+    &:after {
+      @include after-position(auto,50%,2.6rem,1.7rem);
+      bottom:3rem;
+      background:url('/images/common/ic-down-arrow-m02.png') no-repeat left top;
+      background-size:100%;
+      @include transform(translate(-50%,0));
+    }
+    > ul {
+      max-width:100%;
+      li {
+        width:50%;
+        margin-top:9rem;
+        padding-top:16.5rem;
+        text-align:center;
+        &:first-child,
+        &:first-child + li {
+          margin-top:0;
+        }
+        &:before {
+          width:14.3rem;
+          height:14.3rem;
+        }
+        &:after {
+          width:8rem;
+          height:8rem;
+          top:3.2rem;
+        }
+        &.construct {
+          &:after {
+
+          }
+        }
+        &.civil-engineering {
+          &:after {
+
+          }
+        }
+        &.leisure {
+          &:after {
+
+          }
+        }
+        .title, .number {
+
+        }
+        .title {
+          font-size:2rem;
+          line-height:2.8rem;
+          letter-spacing:-.1rem;
+        }
+        .number {
+          margin-top:.4rem;
+          font-size:3.6rem;
+          letter-spacing:-.072rem;
+        }
+      }
+    }
+  }
+  .lifestyle-section {
+    &.line-type01 {
+      .inner {
+        top:16.4rem;
+      }
+      h2 {
+        padding-bottom:223px;
+        span {
+          position:static;
+          display:block;
+          text-align:right;
+        }
+      }
+    }
+    &.line-type02 {
+      .inner {
+        top:16.4rem;
+      }
+      h2 {
+        padding-bottom:124px;
+        span {
+          right:-75px;
+        }
+      }
+    }
+    .inner {
+      top:16.4rem;
+      left:0;
+      right:0;
+      bottom:0;
+      max-width:100%;
+      @include transform(translate(0,0));
+    }
+    h2 {
+      padding-bottom:17.4rem;
+      font-size:3.6rem;
+      line-height:4.8rem;
+      letter-spacing:-.18rem;
+      &:before,
+      &:after {
+        font-size:6.4rem;
+        line-height:9.6rem;
+        letter-spacing:-.32rem;
+      }
+      &:before {
+        bottom:-.4rem;
+      }
+      &:after {
+        bottom:1.6rem;
+      }
+      span {
+        position:static;
+        display:block;
+        margin-bottom:.6rem;
+        font-size:1.6rem;
+        line-height:2.2rem;
+        letter-spacing:-.08rem;
+      }
+    }
+    .text {
+      margin-top:0;
+      padding-top:6rem;
+      font-size:1.4rem;
+      line-height:2rem;
+      letter-spacing:-.07rem;
+    }
+  }
+
+  // main layer popup
+  .layer {
+    &.index-popup {
+      .layer-wrap {
+        //top:5.6rem;
+        left:2.4rem;
+        right:2.4rem;
+        //bottom:5.6rem;
+        max-width:inherit;
+        width:auto;
+        max-height:58rem;
+        @include transform(translate(0,-50%));
+        .layer-content {
+
+        }
+      }
+      .popup-box {
+        bottom:10.5rem;
+      }
+      .text-box {
+        padding:2.4rem 2.4rem 0;
+      }
+      .layer-title {
+        font-size:2rem;
+        line-height:2.8rem;
+        letter-spacing:-.1rem;
+      }
+      .layer-text {
+        margin-top:1.6rem;
+        font-size:1.6rem;
+        line-height:2.2rem;
+        letter-spacing:-.08rem;
+      }
+      .detail-view {
+        bottom:7.3rem;
+        a {
+          font-size:1.6rem;
+          line-height:2.7rem;
+          letter-spacing:-.016rem;
+        }
+      }
+      .today-close {
+        height:auto;
+        padding:1.3rem 2.4rem;
+        .chk-box {
+          padding-left:2.6rem;
+          input[type="checkbox"] {
+            width:1.6rem;
+            height:1.6rem;
+            &:checked {
+              &:before {
+                width:1.6rem;
+                height:1.6rem;
+              }
+            }
+          }
+          label {
+            font-size:1.6rem;
+            line-height:2.7rem;
+          }
+        }
+      }
+      .close {
+        bottom:1.6rem;
+        right:2.4rem;
+        width:2rem;
+        height:2rem;
+        &:before {
+          display:none;
+        }
+      }
+    }
+  }
+}

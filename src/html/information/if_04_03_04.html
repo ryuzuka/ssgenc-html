@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../inc/meta.html',{
+  "pagetitle": "신세계 건설 : IR일정"
+  })
+</head>
+
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+
+  <!--: Start #contents -->
+  <div class="contents">
+    <div class="sub-content i-if04 section header-black">
+      <div class="inner">
+        <h2 class="sg-text-04">IR일정</h2>
+        <div class="tab js-tab">
+          <div class="dropdown tabs js-dropdown" placeholder="2021">
+            <button type="button" id="dropdown" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false"></button>
+            <ul class="dropdown-list" role="listbox" aria-labelledby="dropdown" tabindex="-1">
+              <li role="option" aria-selected="false"><button type="button" data-value="">2021</button></li>
+              <li role="option" aria-selected="false"><button type="button" data-value="">2020</button></li>
+              <li role="option" aria-selected="false"><button type="button" data-value="">2019</button></li>
+              <li role="option" aria-selected="false"><button type="button" data-value="">2018</button></li>
+              <li role="option" aria-selected="false"><button type="button" data-value="">2017</button></li>
+            </ul>
+          </div>
+          <div class="tab-list" role="tablist">
+            <button type="button" id="tab1" role="tab" aria-controls="tab-content1" aria-selected="true">2021</button>
+            <button type="button" id="tab2" role="tab" aria-controls="tab-content2" aria-selected="false">2020</button>
+            <button type="button" id="tab3" role="tab" aria-controls="tab-content3" aria-selected="false">2019</button>
+            <button type="button" id="tab4" role="tab" aria-controls="tab-content4" aria-selected="false">2018</button>
+            <button type="button" id="tab5" role="tab" aria-controls="tab-content5" aria-selected="false">2017</button>
+          </div>
+          <div class="tab-content">
+            <div id="tab-content1" class="content" role="tabpanel" aria-labelledby="tab1" tabindex="0">
+              <div class="ir-box">
+                <dl>
+                  <dt>
+                    <span>9월</span>
+                  </dt>
+                  <dd>
+                    <em class="sg-text-06">KB Korea Conference</em>
+                    <ul>
+                      <li><em>일정</em> : 2021-09-08</li>
+                      <li>장소 : 온라인 컨퍼런스</li>
+                    </ul>
+                    <em class="sg-text-06">Goldman Sachs Food Forum</em>
+                    <ul>
+                      <li><em>일정</em> : 2021-09-07</li>
+                      <li>장소 : 온라인 컨퍼런스</li>
+                    </ul>
+                    <em class="sg-text-06">CITI Korea Corporate Day 2021</em>
+                    <ul>
+                      <li><em>일정</em> : 2021-09-03</li>
+                      <li>장소 : 온라인 컨퍼런스</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>8월</span>
+                  </dt>
+                  <dd>
+                    <em class="sg-text-06">JP Morgan Asia E-Commerce Tour</em>
+                    <ul>
+                      <li><em>일정</em> : 2021-08-25</li>
+                      <li>장소 : 온라인 컨퍼런스</li>
+                    </ul>
+                    <em class="sg-text-06">BofA 2021 Korea Conference</em>
+                    <ul>
+                      <li><em>일정</em> : 2021-08-20</li>
+                      <li>장소 : 온라인 컨퍼런스</li>
+                    </ul>
+                    <em class="sg-text-06">Goldman Sachs Virtual Korea Corporate Day 2021</em>
+                    <ul>
+                      <li><em>일정</em> : 2021-08-19</li>
+                      <li>장소 : 온라인 컨퍼런스</li>
+                    </ul>
+                    <em class="sg-text-06">국내 NDR</em>
+                    <ul>
+                      <li><em>일정</em> : 2021-08-17 ~ 2021-08-18</li>
+                      <li>장소 : 서울(여의도 外)</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div id="tab-content2" class="content" role="tabpanel" aria-labelledby="tab2" tabindex="0">
+              2020
+            </div>
+            <div id="tab-content3" class="content" role="tabpanel" aria-labelledby="tab3" tabindex="0">
+              2019
+            </div>
+            <div id="tab-content4" class="content" role="tabpanel" aria-labelledby="tab4" tabindex="0">
+              2018
+            </div>
+            <div id="tab-content5" class="content" role="tabpanel" aria-labelledby="tab5" tabindex="0">
+              2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--: End #contents -->
+
+    @@include('../inc/footer.html')
+  </div>
+</div>
+
+  <!-- common, plugins, app -->
+  <script type="text/javascript" src="/js/common.js"></script>
+  <script type="text/javascript" src="/js/plugins.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+
+  <!-- components -->
+  <script>
+    ($ => {
+      $.depth1Index = 3
+      $.depth2Index = 3
+
+      $(document).ready(function () {
+        $.switchUI.init($.viewType)
+      })
+    })(window.jQuery)
+  </script>
+</body>
+</html>

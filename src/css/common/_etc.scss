@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+// etc
+.etc-section {
+  position:relative;
+  &:before {
+    position:absolute;
+    left:50%;
+    display:block;
+    max-width:530px;
+    width:100%;
+    height:290px;
+    @include transform(translate(-50%,0) scale(.8));
+    content:'';
+  }
+  .inner {
+    max-width:988px;
+    width:100%;
+    text-align:center;
+  }
+  .sg-text-04 {
+    font-weight:700;
+    .ft-light {
+      font-weight:300;
+      color:inherit;
+    }
+    .ft-normal {
+      font-weight:400;
+      color:inherit;
+    }
+    .ft-color {
+      font-weight:700;
+      color:$point-c1;
+    }
+  }
+  .sg-text-07 {
+    margin-top:26px;
+    font-weight:400;
+    color:$default-c5;
+  }
+  .btn-wrap {
+    margin-top:80px;
+    button {
+      margin:0 6px;
+      &:only-child {
+        margin:0;
+      }
+    }
+  }
+  &.etc01 {
+    padding:483px 0 251px;
+    &:before {
+      top:153px;
+      background:url('/images/common/etc1-01.png') no-repeat left top;
+      background-size:100%;
+    }
+  }
+  &.etc02 {
+    padding:595px 0 86px;
+    &:before {
+      top:265px;
+      background:url('/images/common/etc1-02.png') no-repeat left top;
+      background-size:100%;
+    }
+    .system-check {
+      margin-top:40px;
+      padding:40px 0;
+      background:$default-c10;
+      text-align:center;
+      > em {
+        position:relative;
+        display:inline-block;
+        padding-left:32px;
+        font-size:20px;
+        font-weight:500;
+        line-height:34px;
+        letter-spacing:-1px;
+        &:before {
+          position:absolute;
+          top:50%;
+          left:0;
+          display:block;
+          width:20px;
+          height:21px;
+          background:url('/images/common/ic-time.png') no-repeat left top;
+          background-size:100%;
+          @include transform(translate(0,-50%));
+          content:'';
+        }
+      }
+      > span {
+        display:block;
+        margin-top:8px;
+        font-size:16px;
+        color:$default-c5;
+        line-height:27px;
+      }
+    }
+  }
+  &.etc03 {
+    padding:453px 0 221px;
+    &:before {
+      top:123px;
+      background:url('/images/common/etc2-01.png') no-repeat left top;
+      background-size:100%;
+    }
+  }
+  &.etc04 {
+    padding:595px 0 223px;
+    &:before {
+      top:265px;
+      background:url('/images/common/etc2-02.png') no-repeat left top;
+      background-size:100%;
+    }
+  }
+}

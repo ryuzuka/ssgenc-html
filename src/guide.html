@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./html/inc/meta.html',{
+    "pagetitle": "Guide"
+  })
+</head>
+
+<body>
+  <style>
+    .contents {
+      padding:20px;
+    }
+    .contents section + section {
+      margin-top:40px;
+    }
+    .contents h2 {
+      margin-bottom:20px;
+      padding:5px;
+      border-bottom:1px solid #e8e8e8;
+      background:#e98e42;
+      font-size:18px;
+      font-weight:bold;
+      color:#fff;
+      text-transform:capitalize;
+    }
+    .contents h3 {
+      margin-bottom:20px;
+      padding:10px 0;
+      border-bottom:1px solid #e98e42;
+      font-size:18px;
+      font-weight:bold;
+      /* text-transform:capitalize; */
+    }
+    .contents h3:before {
+      content:'* ';
+    }
+  </style>
+
+  <div class="wrap">
+    <!--: Start #contents -->
+    <div id="contents" class="contents section header-black">
+      <section>
+        <h2>text</h2>
+        <p class="sg-text-01">sg-text-01 (pc : 72/122/-3.6, mo : 52/72/-2.6)</p>
+        <p class="sg-text-02">sg-text-02 (pc : 52/88/-2.6, mo : 34/48/-1.7)</p>
+        <p class="sg-text-03">sg-text-03 (pc : 40/68/-2, mo : 32/46/-1.6)</p>
+        <p class="sg-text-04">sg-text-04 (pc : 32/48/-1.6, mo : 24/30/-1.2)</p>
+        <p class="sg-text-05">sg-text-05 (pc : 24/30/-1.2, mo : 20/28/-1)</p>
+        <p class="sg-text-06">sg-text-06 (pc : 20/34/-1, mo : 20/28/-1)</p>
+        <p class="sg-text-07">sg-text-07 (pc : 18/30/-.18;, mo : 18/30/-.18)</p>
+        <p class="sg-text-08">sg-text-08 (pc : 16/24/-.16, mo : 16/24/-.16)</p>
+        <p class="sg-text-09">sg-text-09 (pc : 16/27, mo : 16/27/-.8)</p>
+        <p class="sg-text-10">sg-text-10 (pc : 14/23/-.7, mo : 14/23/-.7)</p>
+      </section>
+
+      <section>
+        <h2>content layout</h2>
+        <div>
+          <h3>sub content header</h3>
+          <div class="sub-header">
+            <em class="sg-text-06">title</em>
+            <p class="sg-text-01">text text text text text text text text</p>
+            <p class="sg-text-09">text text text text text text text text</p>
+            <p class="sg-text-07">text text text text text text text text</p>
+            <a href="#" class="btn btn-primary"><span>실적보기</span></a>
+          </div>
+          <br><br>
+          <h3>sub content header</h3>
+          <div class="sub-header">
+            <div class="flex-box vertical">
+              <div class="inner-cell">
+                <em class="sg-text-04">title</em>
+              </div>
+              <div class="inner-cell">
+                <p class="sg-text-09">text text text text text</p>
+                <a href="#" class="btn btn-primary"><span>고객상담실 바로가기</span></a>
+              </div>
+            </div>
+            <p class="sg-text-09">text text text text text text text text</p>
+          </div>
+        </div>
+        <br><br>
+        <div>
+          <h3>layout normal : flex-box</h3>
+          <div class="flex-box">
+            <div class="inner-cell">
+              left content<br>left content<br>left content<br>left content<br>left content
+            </div>
+            <div class="inner-cell">
+              right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div>
+          <h3>layout center : flex-box vertical</h3>
+          <div class="flex-box vertical">
+            <div class="inner-cell">
+              left content<br>left content<br>left content<br>left content<br>left content
+            </div>
+            <div class="inner-cell">
+              right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div>
+          <h3>layout width : flex-box width-type</h3>
+          <div class="flex-box width-type">
+            <div class="inner-cell">
+              left content<br>left content<br>left content<br>left content<br>left content
+            </div>
+            <div class="inner-cell">
+              right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content right content
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div>
+          <h3>group-box : gray bg</h3>
+          <div class="group-box">
+            <div class="inner">
+              asd
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>button</h2>
+        <div>
+          <h3>btn-primary</h3>
+          <button type="button" class="btn btn-primary"><span>Button</span></button>
+          <button type="button" class="btn btn-primary" disabled><span>Button</span></button>
+          <h3>btn-secondary</h3>
+          <button type="button" class="btn btn-secondary"><span>Button</span></button>
+          <button type="button" class="btn btn-secondary" disabled><span>Button</span></button>
+          <h3>btn-tertiary</h3>
+          <button type="button" class="btn btn-tertiary"><span>Button</span></button>
+          <button type="button" class="btn btn-tertiary" disabled><span>Button</span></button>
+          <h3>btn-fourth</h3>
+          <button type="button" class="btn btn-fourth"><span>Button</span></button>
+          <button type="button" class="btn btn-fourth" disabled><span>Button</span></button>
+          <h3>btn-download</h3>
+          <button type="button" class="btn btn-download"><span>Button</span></button>
+          <br>
+          <h3>btn-primary-sm</h3>
+          <button type="button" class="btn btn-primary-sm"><span>Button</span></button>
+          <h3>btn-secondary-sm</h3>
+          <button type="button" class="btn btn-secondary-sm"><span>Button</span></button>
+          <h3>btn-tertiary-sm</h3>
+          <button type="button" class="btn btn-tertiary-sm"><span>Button</span></button>
+        </div>
+      </section>
+
+      <section>
+        <h2>modal</h2>
+        <div>
+          <button style="padding: 12px" type="button" class="modalBtn btn alert" aria-haspopup="dialog" aria-controls="pop-alert">alert</button>
+          <button style="padding: 12px" type="button" class="modalBtn btn confirm" aria-haspopup="dialog" aria-controls="pop-confirm">confirm</button>
+          <button style="padding: 12px" type="button" class="modalBtn btn modal" aria-haspopup="dialog" aria-controls="pop-modal">modal</button>
+          <button style="padding: 12px" type="button" class="modalBtn btn full" aria-haspopup="dialog" aria-controls="pop-full">full</button>
+        </div>
+
+        <div id="pop-alert" class="layer" role="dialog" aria-modal="true">
+          <div class="layer-wrap">
+            <div class="layer-content">
+              필수항목을 입력해주세요.
+            </div>
+            <div class="button-wrap">
+              <button class="btn btn-primary-sm">확인</button>
+            </div>
+          </div>
+        </div>
+        <div id="pop-confirm" class="layer" role="dialog" aria-modal="true">
+          <div class="layer-wrap">
+            <div class="layer-content">
+              등록하시겠습니까?
+            </div>
+            <div class="button-wrap">
+              <button class="btn btn-tertiary-sm">취소</button>
+              <button class="btn btn-primary-sm">등록</button>
+            </div>
+          </div>
+        </div>
+        <div id="pop-modal" class="layer" role="dialog" aria-modal="true">
+          <div class="layer-wrap modal">
+            <div class="layer-content">
+              <h1 class="sg-text-05">문의번호 찾기</h1>
+              <p class="sg-text-09">상담접수시 입력한 성함과 이메일을 입력하세요.<br>문의번호를 이메일로 재발송해드립니다.</p>
+              <div class="layer-input-box">
+                <div class="area">
+                  <label for="inputName">이름<span>*</span></label>
+                  <div class="input-box">
+                    <input id="inputName" type="text">
+                  </div>
+                </div>
+                <div class="area">
+                  <label for="inputEmail">이메일<span>*</span></label>
+                  <div class="mo-flex">
+                    <div class="input-box">
+                      <input id="inputEmail" type="text">
+                    </div>
+                    @
+                    <div class="input-box">
+                      <input type="text">
+                    </div>
+                  </div>
+                  <div class="select-box">
+                    <select>
+                      <option>직접입력</option>
+                      <option>naver.com</option>
+                      <option>nate.com</option>
+                      <option>yahoo.co.kr</option>
+                      <option>hotmail.com</option>
+                      <option>gmail.com</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="btn btn-tertiary-sm">취소</button>
+                <button type="button" class="btn btn-primary-sm">확인</button>
+              </div>
+            </div>
+            <button class="close"><span class="blind">close</span></button>
+          </div>
+        </div>
+        <div id="pop-full" class="layer" role="dialog" aria-modal="true">
+          <div class="layer-wrap full">
+            <!-- <div class="title">full modal title</div> -->
+            <button class="close"><span class="blind">팝업 닫기</span></button>
+            <div class="layer-content project">
+              <div class="popup-top">
+                <div class="text-box">
+                  <div class="cell">
+                    <em>15년간 45건 <br class="mobile-only">프로젝트 수행</em>
+                    <span class="total">총 공사비 2조 3천억</span>
+                  </div>
+                </div>
+              </div>
+              <div class="search-area">
+                <div class="inbox">
+                  <input type="text">
+                  <button type="button" class="search"><span class="blind">검색하기</span></button>
+                </div>
+              </div>
+              <table class="tbl-list">
+                <caption><span class="blind">수행 프로젝트 정보</span></caption>
+                <colgroup>
+                  <col style="width:14%;">
+                  <col style="width:21%;">
+                  <col style="width:34%;">
+                  <col style="width:14%;" class="pc-only">
+                  <col style="width:17%;" class="pc-only">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">프로젝트명</th>
+                    <th scope="col" class="pc-only">프로젝트주소</th>
+                    <th scope="col" class="pc-only">규모/연면적</th>
+                    <th scope="col">기간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>아파트</td>
+                    <td>빌리브</td>
+                    <td class="pc-only">서울특별시중구 소월로 10 단암타워 21층 </td>
+                    <td class="pc-only">규모/연면적</td>
+                    <td>2021.01.01 ~ 2021.12.31</td>
+                  </tr>
+                  <tr>
+                    <td>주상복합</td>
+                    <td>성환-입장도로건설공사</td>
+                    <td class="pc-only">-</td>
+                    <td class="pc-only">규모/연면적</td>
+                    <td>2021.01.01 ~ 2021.12.31</td>
+                  </tr>
+                  <tr>
+                    <td>아파트</td>
+                    <td>빌리브</td>
+                    <td class="pc-only">서울특별시중구 소월로 10 단암타워 21층 </td>
+                    <td class="pc-only">규모/연면적</td>
+                    <td>2021.01.01 ~ 2021.12.31</td>
+                  </tr>
+                  <tr>
+                    <td>아파트</td>
+                    <td>빌리브</td>
+                    <td class="pc-only">서울특별시중구 소월로 10 단암타워 21층 </td>
+                    <td class="pc-only">규모/연면적</td>
+                    <td>2021.01.01 ~ 2021.12.31</td>
+                  </tr>
+                  <tr>
+                    <td>아파트</td>
+                    <td>빌리브</td>
+                    <td class="pc-only">서울특별시중구 소월로 10 단암타워 21층 </td>
+                    <td class="pc-only">규모/연면적</td>
+                    <td>2021.01.01 ~ 2021.12.31</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="paging">
+                <button type="button" class="paging-first" disabled><span class="blind">처음</span></button>
+                <button type="button" class="paging-prev" disabled><span class="blind">이전</span></button>
+                <div class="paging-list">
+                  <a href="#" aria-current="page">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">8</a>
+                  <a href="#">9</a>
+                  <a href="#">10</a>
+                </div>
+                <button type="button" class="paging-next"><span class="blind">다음</span></button>
+                <button type="button" class="paging-last"><span class="blind">마지막</span></button>
+              </div>
+              <!-- <button type="button" class="modalBtn">alert</button> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>youtube</h2>
+        <button type="button" class="btn btn-primary-sm youtube"><span>youtube popup</span></button>
+
+        <div id="pop-youtube" class="layer" role="dialog" aria-modal="true">
+          <div class="layer-wrap full">
+            <div class="layer-content youtube">
+              <iframe class="youtube-player" width="100%" height="100%" src="https://www.youtube.com/embed/LG8TKw9BbQw?list=PLH_lFPfgFlvG5Y6wRQyxBh3BYjOGkbNHL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <button class="close mobile"><span class="blind">팝업 닫기</span></button>
+            </div>
+            <button class="close"><span class="blind">팝업 닫기</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>swiper</h2>
+
+        <div class="swiper-container" style="height: 100px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <br>
+        <p><a href="https://swiperjs.com/" target="_blank">https://swiperjs.com/</a></p>
+      </section>
+
+      <section>
+        <h2>block body scroll</h2>
+        <button class="btn btn-tertiary block">block</button>
+        <button class="btn btn-tertiary block scroll">scroll</button>
+      </section>
+
+      <section>
+        <h2>prevent scroll event</h2>
+        <button class="btn btn-tertiary prevent">prevent</button>
+        <button class="btn btn-tertiary prevent scroll">scroll</button>
+      </section>
+
+      <section>
+        <h2>loading</h2>
+        <button class="btn btn btn-tertiary loadingBtn">loading start</button>
+      </section>
+
+      <section>
+        <h2>tab</h2>
+        <div class="tab js-tab">
+          <div class="tab-list" role="tablist">
+            <button type="button" id="tab1" role="tab" aria-controls="tab-content1" aria-selected="true">tab1<br>tab1</button>
+            <button type="button" id="tab2" role="tab" aria-controls="tab-content2" aria-selected="false">tab2</button>
+            <button type="button" id="tab3" role="tab" aria-controls="tab-content3" aria-selected="false">tab3</button>
+          </div>
+          <div class="tab-content">
+            <div id="tab-content1" class="content" role="tabpanel" aria-labelledby="tab1" tabindex="0" hidden>
+              tab1 contents
+            </div>
+            <div id="tab-content2" class="content" role="tabpanel" aria-labelledby="tab2" tabindex="0" hidden>
+              tab2 contents
+            </div>
+            <div id="tab-content3" class="content" role="tabpanel" aria-labelledby="tab3" tabindex="0" hidden>
+              tab3 contents
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="tab js-tab">
+          <div class="tab-list" role="tablist">
+            <a href="#" id="tab11" role="tab" aria-controls="tab-content11" aria-selected="true">tab1<br>tab1</a>
+            <a href="#" id="tab22" role="tab" aria-controls="tab-content22" aria-selected="false">tab2</a>
+            <a href="#" id="tab33" role="tab" aria-controls="tab-content33" aria-selected="false">tab3</a>
+          </div>
+          <div class="tab-content">
+            <div id="tab-content11" class="content" role="tabpanel" aria-labelledby="tab11" tabindex="0" hidden>
+              tab1 contents
+            </div>
+            <div id="tab-content22" class="content" role="tabpanel" aria-labelledby="tab22" tabindex="0" hidden>
+              tab2 contents
+            </div>
+            <div id="tab-content33" class="content" role="tabpanel" aria-labelledby="tab33" tabindex="0" hidden>
+              tab3 contents
+            </div>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-tertiary tab-apply">apply</button>
+        <button class="btn btn-tertiary tab-clear">clear</button>
+      </section>
+
+      <section>
+        <h2>dropdown</h2>
+        <div class="dropdown js-dropdown" placeholder="선택하세요">
+<!--        <div class="dropdown js-dropdown">-->
+          <button type="button" id="dropdown" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false"></button>
+          <ul class="dropdown-list" role="listbox" aria-labelledby="dropdown" tabindex="-1">
+            <li role="option" aria-selected="false"><button type="button" data-value="SKT">SKT</button></li>
+            <li role="option" aria-selected="false"><button type="button" data-value="KT">KT</button></li>
+            <li role="option" aria-selected="false"><button type="button" data-value="LG">LG U+</button></li>
+            <li role="option" aria-selected="false"><button type="button" data-value="frugal">알뜰폰</button></li>
+          </ul>
+        </div>
+        <br>
+        <button class="btn btn-tertiary dropdown-apply">apply</button>
+        <button class="btn btn-tertiary dropdown-clear">clear</button>
+      </section>
+
+      <section>
+        <h2>accordion</h2>
+        <dl class="accordion js-accordion">
+          <dt class="accordion-head"><button type="button" aria-controls="acco-content1" aria-expanded="false">accordion1</button></dt>
+          <dd id="acco-content1" class="accordion-content">contents1</dd>
+          <dt class="accordion-head"><button type="button" aria-controls="acco-content2" aria-expanded="false">accordion2</button></dt>
+          <dd id="acco-content2" class="accordion-content">contents2</dd>
+          <dt class="accordion-head"><button type="button" aria-controls="acco-content3" aria-expanded="false">accordion3</button></dt>
+          <dd id="acco-content3" class="accordion-content">contents3</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>paging</h2>
+        <div class="paging js-paging">
+          <button type="button" class="paging-first" disabled><span class="blind">처음</span></button>
+          <button type="button" class="paging-prev" disabled><span class="blind">이전</span></button>
+          <div class="paging-list">
+            <a href="#" aria-current="page">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+          </div>
+          <button type="button" class="paging-next"><span class="blind">다음</span></button>
+          <button type="button" class="paging-last"><span class="blind">마지막</span></button>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-tertiary paging-apply">apply</button>
+        <button class="btn btn-tertiary paging-clear">clear</button>
+      </section>
+
+      <section>
+        <h2>gsap</h2>
+        <h4>Tween</h4>
+        <div class="gsap obj" style="position: relative; width: 30px; height: 30px; background: #ddd"></div>
+        <br>
+        <button class="gsap btn btn-tertiary">gsap start</button>
+      </section>
+
+      <section>
+        <h2>form</h2>
+        <h3>input</h3>
+        <div>
+          <div class="chk-box">
+            <input type="checkbox" id="chk1-1" name="chk" checked><label for="chk1-1">check</label>
+          </div>
+          <div class="chk-box">
+            <input type="checkbox" id="chk1-2" name="chk"><label for="chk1-2">check</label>
+          </div>
+          <div class="chk-box">
+            <input type="checkbox" id="chk1-3" name="chk" disabled><label for="chk1-3">check</label>
+          </div>
+          <div class="chk-box">
+            <input type="radio" id="rdo1-1" name="rdo" checked><label for="rdo1-1">radio</label>
+          </div>
+          <div class="chk-box">
+            <input type="radio" id="rdo1-2" name="rdo"><label for="rdo1-2">radio</label>
+          </div>
+          <div class="chk-box">
+            <input type="radio" id="rdo1-3" name="rdo" disabled><label for="rdo1-3">radio</label>
+          </div>
+        </div>
+
+        <br>
+
+        <div>
+          <div class="input-box">
+            <label for="inp-txt">input Text</label>
+            <input type="text" placeholder="text" id="inp-txt" class="js-input-text">
+          </div>
+          <br>
+          <div class="input-box">
+            <label for="inp-txt-disabled">input Text disabled</label>
+            <input type="text" placeholder="text" id="inp-txt-disabled" class="js-input-text" disabled>
+          </div>
+          <br>
+          <div class="input-box">
+            <label for="inp-txt-focus">input Text 안내문구 출력</label>
+            <input type="text" placeholder="text" id="inp-txt-focus" class="js-input-text">
+            <p class="info-msg">(!) 안내문구가 출력됩니다.</p>
+          </div>
+          <br><br>
+          <div class="input-box">
+            <label for="inp-txt-error">input Text error</label>
+            <input type="text" id="inp-txt-error" class="error js-input-text">
+            <p class="error-msg">Validation check</p>
+          </div>
+          <br><br>
+          <label for="inp-num">input Number</label><input type="number" id="inp-num"><br><br>
+          <label for="inp-search">input Search</label><input type="search" id="inp-search"><br><br>
+          <label for="inp-pw">input Password</label><input type="password" id="inp-pw"><br><br>
+          <label for="inp-tel">input Tel-Number</label><input type="tel" id="inp-tel"><br><br>
+          <label>input File</label>
+          <div class="attach-file js-attach-file">
+            <input type="text" class="attach-text" readonly="readonly">
+            <label for="attachFile">파일첨부</label>
+            <input type="file" class="attach-file" id="attachFile">
+          </div>
+        </div>
+
+        <h3>text field (textarea)</h3>
+        <div class="input-box js-textarea">
+          <div class="box">
+            <textarea id="txt-field" name="txt-field" maxlength="100" cols="30" rows="10"></textarea>
+            <div class="length-box count"><!-- 글자수 카운트 시작 시 class 추가 -->
+              <span class="current-length">0</span>/<span class="total-length">100</span>
+            </div>
+          </div>
+          <p class="sg-text-10">*내용은 최대 15,000자까지 입력이 가능합니다.</p>
+        </div>
+        <br>
+        <div class="input-box js-textarea">
+          <div class="box">
+            <textarea id="txt-field-error" class="error" name="txt-field" maxlength="100" cols="30" rows="10"></textarea>
+            <div class="length-box count"><!-- 글자수 카운트 시작 시 class 추가 -->
+              <span class="current-length">0</span>/<span class="total-length">100</span>
+            </div>
+          </div>
+          <p class="error-msg">Validation check</p>
+        </div>
+
+        <h3>select</h3>
+        <div class="select-box">
+          <select id="select1" name="select">
+            <option value="opt1">opt1</option>
+            <option value="opt2">opt2</option>
+          </select>
+        </div>
+
+        <h3>contact number</h3>
+        <div class="contact-box">
+          <div class="select-box">
+            <select id="select2" name="select" title="">
+              <option value="opt1">010</option>
+              <option value="opt2">02</option>
+              <option value="opt1">010</option>
+              <option value="opt2">02</option>
+              <option value="opt1">010</option>
+              <option value="opt2">02</option>
+            </select>
+          </div>
+          -
+          <div class="input-box">
+            <input type="text">
+          </div>
+          -
+          <div class="input-box">
+            <input type="text">
+          </div>
+        </div>
+      </section>
+
+      <h3>email input</h3>
+      <div class="email-box">
+        <div class="input-box">
+          <input type="text">
+        </div>
+        @
+        <div class="input-box">
+          <input type="text">
+        </div>
+        <div class="select-box">
+          <select id="" name="select" title="">
+            <option>직접입력</option>
+            <option>naver.com</option>
+            <option>nate.com</option>
+            <option>yahoo.co.kr</option>
+            <option>hotmail.com</option>
+            <option>gmail.com</option>
+          </select>
+        </div>
+      </div>
+      </section>
+
+      <section>
+        <h2>table</h2>
+        <h3>col type</h3>
+        <table class="tbl-list">
+          <caption><span class="blind">수행 프로젝트 정보</span></caption>
+          <colgroup>
+            <col style="width:14%;">
+            <col style="width:21%;">
+            <col style="width:34%;" class="pc-only">
+            <col style="width:14%;" class="pc-only">
+            <col style="width:17%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">프로젝트명</th>
+              <th scope="col" class="pc-only">프로젝트주소</th>
+              <th scope="col" class="pc-only">규모/연면적</th>
+              <th scope="col">기간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>아파트</td>
+              <td>빌리브</td>
+              <td class="pc-only">서울특별시중구 소월로 10 단암타워 21층 </td>
+              <td class="pc-only">규모/연면적</td>
+              <td>2021.01.01 ~ 2021.12.31</td>
+            </tr>
+            <tr>
+              <th scope="row">제목</th>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>row type</h3>
+        <table class="tbl-view">
+          <caption><span class="blind">table caption</span></caption>
+          <colgroup>
+            <col style="width: 15%;">
+            <col>
+          </colgroup>
+          <tbody>
+          <tr>
+            <th scope="row">row1</th>
+            <td>내용</td>
+          </tr>
+          <tr>
+            <th scope="row">row2</th>
+            <td>내용</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>board</h2>
+        <table class="board-list">
+          <caption><span class="blind"></span></caption>
+          <colgroup>
+            <col class="width01">
+            <col class="width02">
+          </colgroup>
+          <tbody>
+          <tr>
+            <td>5</td>
+            <td class="subject">
+                <a href="#">
+                  신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적신세계 ESG 관련 온라인 교육 실적 신세계 ESG 관련 온라인 교육 실적
+                  <span class="date">2021.07.21</span>
+                </a>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="subject">
+              <a href="#">
+                신세계 ESG 관련 온라인 교육 실적
+                <span class="date">2021.07.21</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="subject">
+              <a href="#">
+                신세계 ESG 관련 온라인 교육 실적
+                <span class="date">2021.07.21</span>
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <h3>notice type</h3>
+        <table class="board-list notice">
+          <caption><span class="blind"></span></caption>
+          <colgroup>
+            <col class="width03">
+            <col class="width04">
+            <col class="width05">
+          </colgroup>
+          <tbody>
+          <tr>
+            <td>122</td>
+            <td class="category">
+              <span>뉴스</span>
+            </td>
+            <td class="subject">
+              <a href="#">
+                <span class="sub">2021년 신규협력회사 정기모집 공고</span>
+                <span class="desc">신세계건설㈜ 2021년도 협력회사 운영계획에 따라, 아래와 같이 신규 협력회사를 모집하오니 많은 참여 부탁드립니다.</span>
+                <span class="date">2021.07.21</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>122</td>
+            <td class="category">
+              <span>뉴스</span>
+            </td>
+            <td class="subject">
+              <a href="#">
+                <span class="sub">2021년 신규협력회사 정기모집 공고</span>
+                <span class="desc">신세계건설 빌리브, 건설사 최초 뮤직 콘텐츠 발행 다양한 라이프스타일을 담은 사연과 유명 아티스트와의 라이브 콜라보 화제 신세계 건설은 주거브랜드 빌리브를 통해 아파트 브랜드 시장의 후발주자이지만 독특한 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 신세계건설 빌리브, 건설사 최초 뮤직 콘텐츠 발행 다양한 라이프스타일을 담은 사연과 유명 아티스트와의 라이브 콜라보 화제 신세계 건설은 주거브랜드 빌리브를 통해 아파트 브랜드 시장의 후발주자이지만 독특한 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 신세계건설 빌리브, 건설사 최초 뮤직 콘텐츠 발행 다양한 라이프스타일을 담은 사연과 유명 아티스트와의 라이브 콜라보 화제 신세계 건설은 주거브랜드 빌리브를 통해 아파트 브랜드 시장의 후발주자이지만 독특한 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과 마케팅 방법과</span>
+                <span class="date">2021.07.21</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>122</td>
+            <td class="category">
+              <span>뉴스</span>
+            </td>
+            <td class="subject">
+              <a href="#">
+                <span class="sub">2021년 신규협력회사 정기모집 공고 2021년 신규협력회사 정기모집 공고</span>
+                <span class="date">2021.07.21</span>
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>view</h2>
+        <div class="view">
+          <div class="view-subject">
+            <span class="category">뉴스</span>
+            <em class="sg-text-03">신세계 건설 빌리브, 건설사 최초 뮤직 콘텐츠 발행 다양한<br>라이프스타일을 담은 사연과 유명 아티스트와의 라이브 콜라보 화제</em>
+            <span class="date">2021.01.01</span>
+          </div>
+          <div class="view-content">
+            <div class="img-wrap">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="/images/information/img-view-dummy-m.jpg">
+                <img src="/images/information/img-view-dummy.jpg" alt="">
+              </picture>
+            </div>
+            신세계건설은 주거브랜드 빌리브를 통해 아파트 브랜드 시장의 후발 주자이지만 독특한 마케팅 방법과 메세지로 시장의 흐름을 주도하고있다. ‘빌리브(villiv)’는 신세계건설이 2018년 처음 선보인 주거브랜드로 모던한 형태의 마을 ‘village’와 존중되는 삶의공간 ‘live’의 의미가 결합된 섬세하고 감각적인 라이프 스타일 브랜드다.
+            <br><br>
+            건설사 최초로 자체 미디어인 ‘빌리브매거진’을 운영하며, 전세계의 다양한 공간과 라이프스타일, 그리고
+            삶의 가치에 대해 이야기하며 라이프스타일먼트의 가치를 선보이고있다. 감각적인 콘텐츠뿐만 아니라 온라인 플랫폼을 활용한 동영상 콘텐츠를 선보이며, 다양한 소재와 높은 완성도로 긍정적인 평가를 받고있다. 건설사 최초로 자체 미디어인 ‘빌리브매거진’을 운영하며, 전세계의 다양한 공간과 라이프스타일, 그리고
+            삶의 가치에 대해 이야기하며 라이프스타일먼트의 가치를 선보이고있다. 감각적인 콘텐츠뿐만 아니라 온라인 플랫폼을 활용한 동영상 콘텐츠를 선보이며, 다양한 소재와 높은 완성도로 긍정적인 평가를 받고있다.
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>page prev next</h2>
+        <dl class="page">
+          <dt>이전글</dt>
+          <dd>이전글이 없습니다.</dd>
+          <dt>다음글</dt>
+          <dd><a href="#">신세계건설(주),ESG 내부거래위원회 신설 “투명성강화"</a></dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Loading</h2>
+        <button type="button" class="btn btn-tertiary loading-sample">Loading</button>
+
+        <div class="wrap-loading">
+          <div><img src="/images/common/loading.gif"></div>
+        </div>
+      </section>
+    </div>
+    <!--: End #contents -->
+
+    @@include('./html/inc/footer.html')
+  </div>
+
+  <!-- common, plugins, app -->
+  <script type="text/javascript" src="/js/plugins.js"></script>
+  <script type="text/javascript" src="/js/common.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+
+  <!-- components -->
+  <!--<script type="text/javascript" src="/js/app.js"></script>-->
+
+  <script>
+    $(() => {
+      window.SSG.Guide.init()
+    })
+
+    /** guide ******************************************************************************************************** */
+    window.SSG.Guide = ($ => {
+      let _this = {
+        init () {
+          return {
+            youtube: (() => {
+              $('button.youtube').on('click', e => {
+                $('#pop-youtube').modal({closedFocus: '.modalBtn.confirm'}, e => {
+                  if (e.type === 'open') {
+                  } else if (e.type === 'before-close') {
+                    // youtube stop
+                    let $youtube = e.$modal.find('.youtube-player')
+                    let src = $youtube.attr('src')
+                    $youtube.attr('src', src)
+                    // let player = e.$modal.find('.youtube-player').get(0)
+                    // player.contentWindow.postMessage('{"event":"command", "func": "' + 'stopVideo' +'", "args": ""}', '*')
+                  }
+                })
+              })
+            })(),
+
+            modal: (() => {
+              $('.modalBtn').on('click', event => {
+                /**
+                 * closedFocus: 접근성 준수
+                 * preventScroll: 스크롤 처리 방식 (default: blockBodyScroll
+                 ** */
+
+                if (event.target.className.indexOf(' alert') > -1) {
+                  $('#pop-alert').modal({classes: 'add class test', closedFocus: '.modalBtn.alert'}, e => {
+                    console.log(e)
+                  })
+
+                } else if (event.target.className.indexOf(' confirm') > -1) {
+                  $('#pop-confirm').modal({classes: 'add class test', closedFocus: '.modalBtn.confirm', preventScroll: true}, e => {
+                    console.log(e)
+                  })
+
+                } else if (event.target.className.indexOf(' modal') > -1) {
+                  $('#pop-modal').modal({clickToClose: false, closedFocus: '.modalBtn.modal'}, e => {
+                    console.log(e)
+                    if (e.type === 'open') {
+                      e.$modal.find('.modalBtn').on('click', e => {
+                        // $('#pop-modal').modal('close')
+                        // $('#pop-alert').modal({closedFocus: '.modalBtn.modal'})
+                        $('#pop-alert').modal({classes: 'multi', dimmed: false, closedFocus: '#pop-modal .modalBtn'})
+                      })
+                    } else if (e.type === 'before-close') {
+                      console.log('before-close')
+                    }
+                  })
+
+                } else if (event.target.className.indexOf(' full') > -1) {
+                  $('#pop-full').modal({clickToClose: false, closedFocus: '.modalBtn.full'}, e => {
+                    console.log(e)
+                    if (e.type === 'open') {
+                      e.$modal.find('.modalBtn').on('click', e => {
+                        console.log(e)
+                        $('#pop-alert').modal({classes: 'multi', closedFocus: '#pop-full .modalBtn'}) // multi: dimmed 삭제 class
+                      })
+                    }
+                  })
+                }
+              })
+            })(),
+
+            loading: (() => {
+              $('.loadingBtn').on('click', e => {
+                console.log('loading: start')
+                $.loading('start')
+
+                setTimeout(() => {
+                  console.log('loading: end')
+                  $.loading('stop')
+                }, 1000)
+              })
+            })(),
+
+            dropdown: (() => {
+              let $dropdown = $('.js-dropdown')
+              // // event
+              $dropdown.on('change', e => {
+                console.log('dropdown, type: ' + e.type + ', activeIndex: ' + e.activeIndex + ', value: ' + e.value)
+              })
+              // // init
+              $dropdown.dropdown('clear').dropdown({
+                // activeIndex: 0, // default: 0 | placeholder 있을때 default: -1
+                disableIndex: [2, 3]
+              })
+              // method - active
+              // $dropdown.dropdown('active', 1)
+
+              $('.dropdown-apply').on('click', e => {
+                $('.js-dropdown').dropdown()
+              })
+              $('.dropdown-clear').on('click', e => {
+                $('.js-dropdown').dropdown('clear')
+              })
+            })(),
+
+            tab: (() => {
+              let $tab = $('.js-tab')
+              // event
+              $tab.on('change', e => {
+                console.log('tab, type: ' + e.type + ', activeIndex: ' + e.activeIndex)
+              })
+              // init
+              $tab.tab('clear').tab({
+                // activeIndex: 1 // default: 0
+              })
+              // method - active
+              // $tab.tab('active', 2)
+
+              $('.tab-apply').on('click', e => {
+                $('.js-tab').tab()
+              })
+              $('.tab-clear').on('click', e => {
+                $('.js-tab').tab('clear')
+              })
+            })(),
+
+            accordion: (() => {
+              let $accordion = $('.js-accordion')
+              // event
+              $accordion.on('open', e => {
+                console.log('accordion, type: ' + e.type + ', activeIndex: ' + e.activeIndex)
+              })
+              // init
+              $accordion.accordion('clear').accordion({
+                // activeIndex: 1, // default: -1
+              })
+              // method - active
+              // $accordion.accordion('active', 2)
+            })(),
+
+            paging: (() => {
+              let $paging = $('.paging.js-paging')
+              // event: change
+              $paging.on('change', e => {
+                console.log('paging, type: ' + e.type + ', offset: ' + e.offset + ', total: ' + e.total)
+              })
+              // init
+              $paging.paging({
+                offset: 2, // 현재 페이지 (default: 0)
+                limit: 10, // 화면에 보여지는 리스트 갯수
+                total: 232 // 전체 리스트 갯수
+                // pagingLength: 10 // 화면에 보여지는 paging 갯수 (default: 10) | mobile (default: 5)
+              })
+              // method - set
+              // $paging.paging('set', 4) // offset
+
+              $('.paging-apply').on('click', e => {
+                $('.js-paging').paging({
+                  offset: 5, // 현재 페이지 (default: 0)
+                  limit: 10, // 화면에 보여지는 리스트 갯수
+                  total: 120 // 전체 리스트 갯수
+                })
+              })
+              $('.paging-clear').on('click', e => {
+                $('.js-paging').paging('clear')
+              })
+            })(),
+
+            swiper: (() => {
+              let swiper = new Swiper('.swiper-container', {
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev'
+                },
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true
+                },
+                speed: 300,
+                loop: true,
+                on: {
+                  init () {
+                    // console.log('swiper-init', this.realIndex)
+                  },
+                  transitionEnd () {
+                    // console.log('swiper-end', this.realIndex)
+                  },
+                  slideChange () {
+                    // console.log('swiper-change', this.realIndex)
+                  },
+                  resize () {
+                    // console.log('swiper-resize')
+                  }
+                }
+              })
+            })(),
+
+            blockBodyScroll: (() => {
+              $('.btn.block:not(.scroll)').on('click', e => {
+                $.blockBodyScroll(true)
+              })
+              $('.btn.block.scroll').on('click', e => {
+                $.blockBodyScroll(false)
+              })
+            })(),
+
+            preventScrollEvent: (() => {
+              $('.btn.prevent:not(.scroll)').on('click', e => {
+                $.preventScroll(true)
+              })
+              $('.btn.prevent.scroll').on('click', e => {
+                $.preventScroll(false)
+              })
+            })(),
+
+            gsap: (() => {
+              // tween
+              let left = parseInt($(window).width() - $('.gsap.obj').width() * 3)
+              $('.gsap.btn').on('click', e => {
+                gsap.to('.gsap.obj', 1, {
+                  transform: `translate3d(${left}px, 0px, 0px) scaleX(1.5) scaleY(1.5)`,
+                  ease: Expo.easeInOut,
+                  onComplete: () => {
+                    console.log('onComplete')
+                  }})
+              })
+            })()
+          }
+        }
+      }
+
+      $('.loading-sample').on('click',function(){
+        $('.wrap-loading').show();
+      });
+
+      return _this
+    })(window.jQuery)
+    /** ***************************************************************************************************************** */
+
+  </script>
+</body>
+</html>

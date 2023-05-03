@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../inc/meta.html',{
+  "pagetitle": "SHINSEGAE E&C"
+  })
+</head>
+
+<body class="en">
+<div class="wrap">
+  @@include('../inc/header.html')
+
+  <!--: Start #contents -->
+  <div class="contents">
+    <div class="etc-section etc03 section header-black">
+      <div class="inner">
+        <p class="sg-text-04"><span class="ft-normal">We are sorry for the inconvenience.</span><br>Page not found.</p>
+        <p class="sg-text-07">The page you are trying to reach cannot be found as URL may not be correct, deleted, or changed.<br>
+          If the problem persists, please contact our Customer Service Center.</p>
+        <div class="btn-wrap">
+          <button type="button" class="btn btn-primary"><span>Previous page</span></button>
+          <button type="button" class="btn btn-primary"><span>Contact us</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--: End #contents -->
+
+  @@include('../inc/footer.html')
+</div>
+
+<!-- common, plugins, app -->
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/plugins.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+<!-- components -->
+<script>
+  ($ => {
+    $.depth1Index = -1
+    $.depth2Index = -1
+
+  })(window.jQuery)
+</script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>프로젝트 등록/수정</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+</head>
+
+<body class="admin">
+  <div class="wrap">
+    <div class="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1><a href="#">SHINSEGAE ENGINEERING & CONSTRUCTION</a></h1>
+        <div class="util">
+          <span class="user"><span>홍길동</span>님</span>
+          <button type="button" class="btn">로그아웃</button>
+        </div>
+      </header>
+      <!-- // Header -->
+      <div class="container">
+        <!-- Top Menu -->
+        <ul class="top-menu">
+          <li class="current"><a href="#">프로젝트 관리</a></li>
+          <li><a href="#">게시판 관리</a></li>
+          <li><a href="#">사이트 관리</a></li>
+          <li><a href="#">관리자 관리</a></li>
+        </ul>
+        <!-- // Top Menu -->
+        <div class="contents-wrap">
+          <!-- Left Menu -->
+          <div class="left-menu">
+            <ul>
+              <li class="current"><a href="#">프로젝트 관리</a></li>
+              <li><a href="#">프로젝트 리스트 관리</a></li>
+            </ul>
+          </div>
+          <!-- // Left Menu -->
+          <!-- Contents -->
+          <div class="contents">
+            <h2>프로젝트 관리</h2>
+            <table class="tbl">
+              <colgroup>
+                <col style="width:20%;">
+                <col style="width:80%;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">지역 구분 <span>*</span></th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect01_01" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_01">서울</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_02" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_02">경기</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_03" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_03">강원</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_04" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_04">충청</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_05" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_05">전라</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_06" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_06">경상</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_07" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_07">제주</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_08" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_08">해외기타</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">사업분야 <span>*</span></th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect02_01" type="radio" name="radioSelect02">
+                    <label for="radioSelect02_01">주거시설</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect02_02" type="radio" name="radioSelect02">
+                    <label for="radioSelect02_02">건축시설</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect02_03" type="radio" name="radioSelect02">
+                    <label for="radioSelect02_03">토목시설</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect02_04" type="radio" name="radioSelect02">
+                    <label for="radioSelect02_04">레저사업</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">구분 <span>*</span></th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect03_01" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_01">상업시설</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03_02" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_02">물류플랜트</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03_03" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_03">교육업무시설</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03_04" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_04">호텔리조트</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03_05" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_05">기타</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트 (국문) <span>*</span></th>
+                <td><input type="text" class="w760" placeholder="빌리브 패러그래프 해운대"></td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트명 (영문) <span>*</span></th>
+                <td><input type="text" class="w760"></td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트 설명(국문) <span>*</span></th>
+                <td><textarea rows="3" cols="5"></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트 설명(영문) <span>*</span></th>
+                <td><textarea rows="3" cols="5"></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트 주소 (국문)</th>
+                <td><input type="text" class="w760"></td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트 주소 (영문)</th>
+                <td><input type="text" class="w760"></td>
+              </tr>
+              <tr>
+                <th scope="row">규모/연면적 (국문) <span>*</span></th>
+                <td><input type="text" class="w760"></td>
+              </tr>
+              <tr>
+                <th scope="row">규모/연면적 (영문) <span>*</span></th>
+                <td><input type="text" class="w760"></td>
+              </tr>
+              <tr>
+                <th scope="row">세대수</th>
+                <td><input type="text" class="w760"></td>
+              </tr>
+              <tr>
+                <th scope="row">기간 <span>*</span></th>
+                <td>
+                  <div class="datepicker-box">
+                    <div class="date-box">
+                      <input type="text" class="datepicker">
+                    </div>
+                    ~
+                    <div class="date-box">
+                      <input type="text" class="datepicker">
+                    </div>
+                  </div>
+                  <div class="check-box">
+                    <input id="projectCheck" type="checkbox">
+                    <label for="projectCheck">프로젝트 진행중</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">대표 이미지(PC) <span>*</span></th>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile01">파일찾기</label>
+                    <input id="attachFile01" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">가로형 이미지 : 1234*926, 세로형 이미지 : 714*926 권장 (등록 가능 확장자 : jpg, gif, png)<br>* 단, 메인 프로젝트의 경우 이미지 해상도가 높은것 권장</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="4">상세 이미지(PC) <span>*</span></th>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile02">파일찾기</label>
+                    <input id="attachFile02" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <div class="area">
+                      <span class="text">대체 텍스트</span>
+                      <input type="text" class="w375">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile03">파일찾기</label>
+                    <input id="attachFile03" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile04">파일찾기</label>
+                    <input id="attachFile04" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile05">파일찾기</label>
+                    <input id="attachFile05" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">대표 이미지(MO) <span>*</span></th>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile01_01">파일찾기</label>
+                    <input id="attachFile01_01" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">가로형 이미지 : 1234*926, 세로형 이미지 : 714*926 권장 (등록 가능 확장자 : jpg, gif, png)<br>* 단, 메인 프로젝트의 경우 이미지 해상도가 높은것 권장</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="4">상세 이미지(MO) <span>*</span></th>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile02_01">파일찾기</label>
+                    <input id="attachFile02_01" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <div class="area">
+                      <span class="text">대체 텍스트</span>
+                      <input type="text" class="w375">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile03_01">파일찾기</label>
+                    <input id="attachFile03_01" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile04_01">파일찾기</label>
+                    <input id="attachFile04_01" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile05_01">파일찾기</label>
+                    <input id="attachFile05_01" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">공개여부 <span>*</span></th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect04_01" type="radio" name="radioSelect04">
+                    <label for="radioSelect04_01">전체공개</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect04_02" type="radio" name="radioSelect04">
+                    <label for="radioSelect04_02">국문</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect04_03" type="radio" name="radioSelect04">
+                    <label for="radioSelect04_03">영문</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect04_04" type="radio" name="radioSelect04">
+                    <label for="radioSelect04_04">비공개</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">메인여부 <span>*</span></th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect05_01" type="radio" name="radioSelect05">
+                    <label for="radioSelect05_01">해제</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect05_02" type="radio" name="radioSelect05">
+                    <label for="radioSelect05_02">지정</label>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="btn-wrap">
+              <div class="left">
+                <button type="button" class="btn btn-secondary">삭제</button>
+              </div>
+              <div class="right">
+                <button type="button" class="btn btn-secondary">취소</button>
+                <button type="button" class="btn btn-primary">등록</button>
+              </div>
+            </div>
+
+            <!-- 수정이력 -->
+            <div class="modify-history">
+              <em>수정이력</em>
+              <ul>
+                <li>최초작성 : <span>홍길동</span> <span>2021.07.16 19:42</span></li>
+                <li>최종수정 : <span>김신세</span> <span>2021.07.16 20:11</span></li>
+              </ul>
+            </div>
+            <!-- // 수정이력 -->
+          </div>
+          <!-- // Contents -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    ($ => {
+      $(document).ready(function () {
+        // datepicker
+        $('.datepicker').datepicker()
+
+        // attach file
+        $('.attach-file').on('change',function(){
+          let fileName = $(this).val().replace(/C:\\fakepath\\/i, '')
+          $(this).siblings('.attach-text').val(fileName)
+        })
+      })
+    })(window.jQuery)
+  </script>
+</body>
+</html>

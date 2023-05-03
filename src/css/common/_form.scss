@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+//form
+fieldset {
+  margin:0;
+  padding:0;
+  border:0;
+}
+input{
+  &[type="checkbox"], &[type="radio"] {
+    position:relative;
+    width:20px;
+    height:20px;
+    border:1px solid $default-c6;
+    background-color:#fff;
+    @include border-radius(4px);
+    vertical-align:middle;
+    & + label {
+      display:inline-block;
+      font-size:16px;
+      line-height:27px;
+      color:#787878;
+      vertical-align:middle;
+    }
+    &:checked {
+      &+ label {}
+    }
+    &[disabled] {
+      & + label {}
+    }
+  }
+  &[type="checkbox"] {
+    &:checked, &:disabled {
+      &:before {
+        position:absolute;
+        top:0;
+        left:0;
+        display:block;
+        width:20px;
+        height:20px;
+        content:'';
+      }
+    }
+    &:checked {
+      border:none;
+      &:before {
+        background:url('/images/common/ic-check-active.png') no-repeat left top;
+        background-size:100%;
+      }
+    }
+    &:disabled {
+      &:before {
+        background:url('/images/common/ic-check-disable.png') no-repeat left top;
+        background-size:100%;
+      }
+    }
+  }
+  &[type="radio"] {
+    border-radius:100%;
+    &:checked{
+      border-color:$point-c1;
+      &:after{
+        background-color:$point-c1;
+      }
+    }
+    &:checked, &:disabled {
+      &:after {
+        content:'';
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:12px;
+        height:12px;
+        border-radius:100%;
+        @include transform(translate(-50%,-50%));
+      }
+    }
+    &:disabled {
+      border-color:#e0e0e0;
+      background:$default-c2;
+      &:after {
+        background-color:#e0e0e0;
+      }
+    }
+  }
+  &[type="text"],
+  &[type="tel"],
+  &[type="number"],
+  &[type="password"],
+  &[type="search"] {
+    width:100%;
+    height:40px;
+    padding:5px 15px 6px;
+    border:1px solid $default-c6;
+    background:$default-c2;
+    color:$default-c4;
+    @include border-radius(2px);
+    @include box-sizing;
+    &::placeholder {
+      color:$default-c12;
+      font-family:inherit;
+    }
+    &:focus {}
+    &:invalid {border-color:$accent;}
+    &.error {
+      border:1px solid #f00;
+      background:#ffefef;
+    }
+  }
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+  }
+}
+.input-box {
+  position:relative;
+  .box {
+    position:relative;
+  }
+  .length-box {
+    position:absolute;
+    right:16px;
+    bottom:8px;
+    font-size:16px;
+    line-height:27px;
+    color:#e0e0e0;
+    &.count {
+      color:#bbb;
+    }
+  }
+  .sg-text-10 {
+    margin-top:10px;
+    color:$default-c12;
+  }
+  .info-msg {
+    margin-top:10px;
+    font-size:14px;
+    color:#666;
+  }
+  .error-msg {
+    margin-top:10px;
+    font-size:14px;
+    color:#f00;
+  }
+}
+.chk-box {
+  position:relative;
+  display:inline-block;
+  padding-left:28px;
+  input {
+    position:absolute;
+    top:4px;
+    left:0;
+    //@include transform(translate(0,-50%));
+  }
+  & + .chk-box {
+    margin-left:20px;
+  }
+}
+textarea {
+  width:100%;
+  height:150px;
+  padding:8px 17px;
+  border:1px solid $default-c6;
+  font-family:inherit;
+  color:$default-c4;
+  resize:none;
+  @include box-sizing;
+  &::placeholder {
+    color:$default-c12;
+  }
+  &.error {
+    border:1px solid #f00;
+    background:#ffefef;
+  }
+}
+select {
+  position:relative;
+  width:100%;
+  height:40px;
+  padding:6px 40px 7px 16px;
+  border:1px solid $default-c6;
+  border-radius:2px;
+  background-color:transparent;
+  font-family:inherit;
+  color:$default-c4;
+  caret-color:$primary;
+  appearance:none;
+  select::-ms-expand {
+    display:none;
+  }
+}
+.select-box {
+  position:relative;
+  &:before {
+    position:absolute;
+    top:50%;
+    right:16px;
+    display:block;
+    width:14px;
+    height:14px;
+    background:url('/images/common/ic-select.png') no-repeat left top;
+    background-size:100%;
+    @include transform(translate(0,-50%));
+    content:'';
+  }
+}
+select,input,textarea {
+  &[disabled] {
+    border-color:$default-c6;
+    background:$default-c2;
+    color:$default-c12;
+    opacity:1;
+  }
+}
+button {
+  cursor:pointer;
+  &[disabled] {cursor:default;}
+}
+.attach-file {
+  position:relative;
+  width:310px;
+  padding-right:81px;
+  font-size:0;
+  line-height:0;
+  @include box-sizing;
+  input[type="text"] {
+
+  }
+  label {
+    position:absolute;
+    top:0;
+    right:0;
+    display:block;
+    min-width:82px;
+    margin-left:-1px;
+    background:$default-c7;
+    font-size:14px;
+    color:$default-c2;
+    @include border-radius(2px);
+    line-height:40px;
+    letter-spacing:-.7px;
+    text-align:center;
+    vertical-align:middle;
+  }
+  input[type="file"] {
+    position:absolute;
+    overflow:hidden;
+    width:1px;
+    height:1px;
+    margin:-1px;
+    padding:0;
+    border:0 none;
+    clip:rect(0, 0, 0, 0);
+  }
+}
+.contact-box {
+  display:flex;
+  font-size:16px;
+  color:$default-c3;
+  align-items:center;
+  .select-box {
+    width:91px;
+    margin-right:8px;
+    flex-shrink:0;
+  }
+  .input-box {
+    width:87px;
+    margin:0 8px;
+    flex-grow:1;
+    &:last-child {
+      margin-right:0;
+    }
+  }
+  .select-box, .input-box {
+    display:inline-block;
+    vertical-align:middle;
+  }
+  .del {
+
+  }
+}
+.email-box {
+  display:flex;
+  font-size:16px;
+  color:$default-c3;
+  line-height:27px;
+  align-items:center;
+  .input-box {
+    width:134px;
+    margin-right:10px;
+    flex-grow:1;
+    & ~ .input-box {
+      margin:0 0 0 7px;
+    }
+  }
+  .select-box {
+    width:149px;
+    margin-left:8px;
+    flex-shrink:0;
+  }
+  .select-box, .input-box {
+    display:inline-block;
+    vertical-align:middle;
+  }
+}
+
+// form
+@include mobile {
+  input{
+    &[type="checkbox"], &[type="radio"] {
+      width:2rem;
+      height:2rem;
+      & + label {
+        font-size:1.6rem;
+        line-height:2.7rem;
+      }
+      &:checked {
+        &+ label {}
+      }
+      &[disabled] {
+        &:before {
+          width:2rem;
+          height:2rem;
+        }
+        & + label {}
+      }
+    }
+    &[type="checkbox"] {
+      &:checked {
+        &:before {
+          width:2rem;
+          height:2rem;
+        }
+      }
+    }
+    &[type="radio"] {
+      &:checked, &:disabled {
+        &:after{
+          width:1.2rem;
+          height:1.2rem;
+        }
+      }
+    }
+    &[type="text"],
+    &[type="tel"],
+    &[type="number"],
+    &[type="password"],
+    &[type="search"] {
+      height:4rem;
+      padding:.5rem .6rem;
+      font-size:1.6rem;
+      &::placeholder {
+      }
+      &:focus {}
+      &:invalid {}
+    }
+  }
+  .chk-box {
+    padding-left:2.8rem;
+    input {
+
+    }
+  }
+  .input-box {
+    .box {
+    }
+    .del {
+      right:1.6rem;
+      width:1.6rem;
+      height:1.6rem;
+    }
+    .length-box {
+      right:2.5rem;
+      bottom:.7rem;
+      font-size:1.6rem;
+      line-height:2.7rem;
+      &.count {
+      }
+    }
+    input[type="text"] {
+      &:focus {
+        padding-right:3.2rem;
+        & + .del {
+
+        }
+      }
+    }
+    .sg-text-10 {
+      margin-top:1rem;
+    }
+    .info-msg {
+      margin-top:1rem;
+      font-size:1.4rem;
+    }
+    .error-msg {
+      margin-top:1rem;
+      font-size:1.4rem;
+    }
+  }
+  textarea {
+    height:18rem;
+    padding:.7rem 2.5rem;
+    &::placeholder {
+
+    }
+    &.error {
+
+    }
+  }
+  select {
+    height:4rem;
+    padding:.6rem 4rem .7rem .8rem;
+    border-radius:.2rem;
+    select::-ms-expand {
+    }
+  }
+  .select-box {
+    &:before {
+      right:1.6rem;
+      width:1.4rem;
+      height:1.4rem;
+    }
+  }
+  select,input,textarea {
+    &[disabled] {
+    }
+  }
+  button {
+    &[disabled] {}
+  }
+  .attach-file {
+    width:100%;
+    padding-right:8.1rem;
+    input[type="text"] {
+
+    }
+    label {
+      min-width:8.2rem;
+      margin-left:-.1rem;
+      font-size:1.4rem;
+      line-height:4rem;
+      letter-spacing:-.07rem;
+    }
+    input[type="file"] {
+    }
+  }
+  .contact-box {
+    font-size:1.6rem;
+    color:$default-c3;
+    .select-box {
+      width:7.6rem;
+      margin-right:.4rem;
+    }
+    .input-box {
+      width:1rem;
+      margin:0 .4rem;
+      flex-grow:1;
+      &:last-child {
+        margin-right:0;
+      }
+    }
+    .select-box, .input-box {
+    }
+    .del {
+
+    }
+  }
+  .email-box {
+    display:block;
+    font-size:1.6rem;
+    line-height:2.7rem;
+    .flex-area {
+      display:flex;
+      align-items:center;
+    }
+    .input-box {
+      width:10rem;
+      margin-right:.8rem;
+      & ~ .input-box {
+        margin:0 0 0 .8rem;
+      }
+    }
+    .select-box {
+      display:block;
+      width:100%;
+      margin:1rem 0 0;
+    }
+    .select-box, .input-box {
+
+    }
+  }
+}

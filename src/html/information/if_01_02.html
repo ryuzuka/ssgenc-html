@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../inc/meta.html',{
+  "pagetitle": "신세계 건설 : 뉴스"
+  })
+</head>
+
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+
+  <!--: Start #contents -->
+  <div class="contents">
+    <div class="sub-content i-if01 section header-black">
+      <div class="inner">
+        <div class="view">
+          <div class="view-subject">
+            <span class="category">뉴스</span>
+            <em class="sg-text-03">신세계 건설 빌리브, 건설사 최초 뮤직 콘텐츠 발행 다양한<br>라이프스타일을 담은 사연과 유명 아티스트와의 라이브 콜라보 화제</em>
+            <span class="date">2021.01.01</span>
+          </div>
+          <div class="view-content">
+            <div class="btn-wrap">
+              <button type="button" class="btn btn-primary"><span>기사 원문 보러가기</span></button>
+            </div>
+          </div>
+        </div>
+        <dl class="page">
+          <dt>이전글</dt>
+          <dd>이전글이 없습니다.</dd>
+          <dt>다음글</dt>
+          <dd><a href="#">신세계건설(주),ESG 내부거래위원회 신설 “투명성강화"</a></dd>
+        </dl>
+        <div class="btn-wrap">
+          <button type="button" class="btn btn-primary"><span>목록</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--: End #contents -->
+
+  @@include('../inc/footer.html')
+</div>
+
+<!-- common, plugins, app -->
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/plugins.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+<!-- components -->
+<script>
+  ($ => {
+    $.depth1Index = 3
+    $.depth2Index = 0
+
+  })(window.jQuery)
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../inc/meta.html',{
+  "pagetitle": "신세계 건설 : 협력사 시스템"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+
+    <!--: Start #contents -->
+    <div class="contents">
+      <div class="visual csr section">
+        <div class="text-box">
+          <h2 class="sg-text-01">협력사 시스템</h2>
+          <p class="sg-text-02">파트너사와 소통하는 공간</p>
+        </div>
+      </div>
+      <div class="sub-content c-cr07 section header-black">
+        <div class="inner">
+          <ul class="business-partner">
+            <li>
+              <span class="sg-text-03">협력사 전자조달 시스템(STEPS)</span>
+              <div class="btn-area">
+                <a href="https://scm.shinsegae-con.co.kr/nexaui/index.html" class="btn btn-primary" target="_blank" title="새창 열림"><span>바로가기</span></a>
+              </div>
+            </li>
+            <li>
+              <span class="sg-text-03">협력사 지원 시스템(ONES)</span>
+              <div class="btn-area">
+                <a href="https://efos.shinsegae-con.co.kr/scfoui/index.html" class="btn btn-primary" target="_blank" title="새창 열림"><span>바로가기</span></a>
+              </div>
+            </li>
+            <li class="qr">
+              <span class="sg-text-03">협력사용 모바일 ONES</span>
+              <div class="qr-code">
+                <div class="qr-img">
+                  <img src="/images/csr/qr.png" alt="">
+                </div>
+                <span class="sg-text-05">모바일용 QR코드</span>
+              </div>
+              <div class="btn-area mobile-only">
+                <a href="https://efos.shinsegae-con.co.kr/mssm/appvndr" class="btn btn-primary"><span>다운로드</span></a>
+                <span class="sg-text-05">모바일 전용 다운로드</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--: End #contents -->
+    @@include('../inc/footer.html')
+  </div>
+
+  <!-- common, plugins, app -->
+  <script type="text/javascript" src="/js/common.js"></script>
+  <script type="text/javascript" src="/js/plugins.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+
+  <!-- components -->
+  <script>
+    ($ => {
+      $.depth1Index = 2
+      $.depth2Index = 6
+
+    })(window.jQuery)
+  </script>
+</body>
+</html>

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>관리자 사이트 가이드</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+</head>
+
+<body class="admin">
+  <div class="wrap">
+    <div class="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1><a href="#">SHINSEGAE ENGINEERING & CONSTRUCTION</a></h1>
+        <div class="util">
+          <span class="user"><a href="#">홍길동</a>님</span>
+          <button type="button" class="btn">로그아웃</button>
+        </div>
+      </header>
+      <!-- // Header -->
+      <div class="container">
+        <!-- Top Menu -->
+        <ul class="top-menu">
+          <li class="current"><a href="#">프로젝트 관리</a></li>
+          <li><a href="#">게시판 관리</a></li>
+          <li><a href="#">사이트 관리</a></li>
+          <li><a href="#">관리자 관리</a></li>
+        </ul>
+        <!-- // Top Menu -->
+        <div class="contents-wrap">
+          <!-- Left Menu -->
+          <div class="left-menu">
+            <ul>
+              <li class="current"><a href="#">이사회 진행사항 관리</a></li>
+              <li><a href="#">위원 운영내역 관리</a></li>
+              <li><a href="#">뉴스&공지 / 영상관리</a></li>
+              <li><a href="#">실적보고서 관리</a></li>
+              <li><a href="#">공시 관리</a></li>
+              <li><a href="#">ESG 공시관리</a></li>
+              <li><a href="#">수상실적 관리</a></li>
+              <li><a href="#">사회공헌 관리</a></li>
+              <li><a href="#">직무소개 관리</a></li>
+              <li><a href="#">채용공고 관리</a></li>
+              <li><a href="#">고객상담 관리</a></li>
+              <li><a href="#">제보 관리</a></li>
+            </ul>
+          </div>
+          <!-- // Left Menu -->
+          <!-- Contents -->
+          <div class="contents">
+            <h2>프로젝트 관리</h2>
+            <!-- tab -->
+            <ul class="tab">
+              <li class="current"><a href="#">국문</a></li>
+              <li><a href="#">영문</a></li>
+            </ul>
+            <!-- // tab -->
+            <table class="tbl">
+              <colgroup>
+                <col style="width:20%;">
+                <col style="width:80%;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">구분</th>
+                <td>
+                  <div class="select-box">
+                    <select>
+                      <option>지역</option>
+                      <option>서울</option>
+                      <option>경기</option>
+                      <option>강원</option>
+                      <option>충청</option>
+                      <option>전라</option>
+                      <option>경상</option>
+                      <option>제주</option>
+                      <option>해외기타</option>
+                    </select>
+                  </div>
+                  <div class="select-box">
+                    <select>
+                      <option>사업분야</option>
+                      <option>전체</option>
+                      <option>주거시설</option>
+                      <option>상업시설</option>
+                      <option>레저시설</option>
+                      <option>토목시설</option>
+                    </select>
+                  </div>
+                  <div class="select-box">
+                    <select>
+                      <option>구분</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">검색</th>
+                <td>
+                  <div class="select-input">
+                    <div class="select-box">
+                      <select>
+                        <option>전체</option>
+                      </select>
+                    </div>
+                    <input type="text">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">회차</th>
+                <td><input type="number" class="w100"></td>
+              </tr>
+              <tr>
+                <th scope="row">검색</th>
+                <td><input type="text" class="w375" placeholder="검색어를 입력해주세요."></td>
+              </tr>
+              <tr>
+                <th scope="row">검색</th>
+                <td><input type="text" class="w760" placeholder="검색어를 입력해주세요."></td>
+              </tr>
+              <tr>
+                <th scope="row">검색</th>
+                <td><input type="text" placeholder="검색어를 입력해주세요."></td>
+              </tr>
+              <tr>
+                <th scope="row">등록일</th>
+                <td>
+                  <div class="datepicker-box">
+                    <div class="date-box">
+                      <input type="text" class="datepicker">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트 기간</th>
+                <td>
+                  <div class="datepicker-box">
+                    <div class="date-box">
+                      <input type="text" class="datepicker">
+                    </div>
+                    ~
+                    <div class="date-box">
+                      <input type="text" class="datepicker">
+                    </div>
+                  </div>
+                  <div class="month-box">
+                    <div class="month-check">
+                      <input id="monthCheck01" type="radio" name="monthCheck">
+                      <label for="monthCheck01">3개월</label>
+                    </div>
+                    <div class="month-check">
+                      <input id="monthCheck02" type="radio" name="monthCheck">
+                      <label for="monthCheck02">6개월</label>
+                    </div>
+                    <div class="month-check">
+                      <input id="monthCheck03" type="radio" name="monthCheck">
+                      <label for="monthCheck03">12개월</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">공개여부</th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect01" type="radio" name="radioSelect">
+                    <label for="radioSelect01">전체</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect02" type="radio" name="radioSelect">
+                    <label for="radioSelect02">국문</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03" type="radio" name="radioSelect">
+                    <label for="radioSelect03">영문</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect04" type="radio" name="radioSelect">
+                    <label for="radioSelect04">비공개</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">노출여부</th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect01_01" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_01">Y</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect01_02" type="radio" name="radioSelect01">
+                    <label for="radioSelect01_02">N</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트 설명(국문)</th>
+                <td><textarea rows="3" cols="5"></textarea></td>
+              </tr>
+              <tr>
+                <th scope="row">첨부파일</th>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile01">파일찾기</label>
+                    <input id="attachFile01" type="file" class="attach-file">
+                    <span class="text-info">(등록 가능 확장자 : pdf)</span>
+                    <div class="regist-box">
+                      <div class="regist-file">
+                        <span>문서.pdf</span>
+                        <button type="button" class="delete"><span class="blind">삭제</span></button>
+                      </div>
+                      <div class="regist-file">
+                        <span>문서문서문서문서문서문서문서문서문서문서문서문서문서문서문서문서문서.pdf</span>
+                        <button type="button" class="delete"><span class="blind">삭제</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">대표 이미지 <span>*</span></th>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile02">파일찾기</label>
+                    <input id="attachFile02" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+                      <!-- 테스트 이미지 입니다 -->
+                      <img src="https://www.shinsegae-enc.com/images/main/m_visual01_bg.jpg" alt="">
+                      <!-- // 테스트 이미지 입니다 -->
+                    </div>
+                    <span class="regist-info">가로형 이미지 : 1234*926, 세로형 이미지 : 714*926 권장 (등록 가능 확장자 : jpg, gif, png)<br>* 단, 메인 프로젝트의 경우 이미지 해상도가 높은것 권장</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="2">상세 이미지 <span>*</span></th>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile03">파일찾기</label>
+                    <input id="attachFile03" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+                      <!-- 테스트 이미지 입니다 -->
+                      <img src="https://www.shinsegae-enc.com/images/business/view02_01.jpg" alt="">
+                      <!-- // 테스트 이미지 입니다 -->
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <div class="area">
+                      <span class="text">대체 텍스트</span>
+                      <input type="text" class="w375">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="file-box">
+                    <input type="text" class="attach-text w375" readonly placeholder="파일첨부">
+                    <label for="attachFile04">파일찾기</label>
+                    <input id="attachFile04" type="file" class="attach-file">
+                  </div>
+                  <div class="regist-box">
+                    <div class="regist-img">
+
+                    </div>
+                    <span class="regist-info">812x472 권장 (등록 가능 확장자 : jpg, gif, png)</span>
+                    <div class="regist-file">
+                      <span>하남스타필드 안성 이미지. jpg</span>
+                      <button type="button" class="delete"><span class="blind">삭제</span></button>
+                    </div>
+                  </div>
+                  <div class="regist-text">
+                    <span class="text">대체 텍스트</span>
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">사외이사 a 동의 성명 여부 <span>*</span></th>
+                <td>
+                  <div class="select-box">
+                    <select>
+                      <option>--선택--</option>
+                    </select>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03_01" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_01">찬성</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03_02" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_02">반대</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect03_03" type="radio" name="radioSelect03">
+                    <label for="radioSelect03_03">N/A</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">바로가기 버튼 등록</th>
+                <td>
+                  <div class="radio-box">
+                    <input id="radioSelect04_01" type="radio" name="radioSelect04">
+                    <label for="radioSelect04_01">버튼 노출</label>
+                  </div>
+                  <div class="radio-box">
+                    <input id="radioSelect04_02" type="radio" name="radioSelect04">
+                    <label for="radioSelect04_02">버튼 미노출</label>
+                  </div>
+                  <div class="regist-text type">
+                    <div class="area">
+                      <span class="text">버튼명</span>
+                      <input type="text" class="w375">
+                      <span class="text-info">10자 이내 등록 가능합니다.</span>
+                    </div>
+                    <div class="area">
+                      <span class="text">URL</span>
+                      <input type="text" class="w760">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">링크 <span>*</span></th>
+                <td>
+                  <div class="regist-text">
+                    <div class="area">
+                      <span class="text fw">URL</span>
+                      <input type="text" class="w375">
+                    </div>
+                    <div class="area">
+                      <span class="text">링크 텍스트</span>
+                      <input type="text" class="w375">
+                      <span class="text-info">10자 이내 등록 가능합니다.</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">아이디 <span>*</span></th>
+                <td>
+                  <div class="find-id">
+                    <input type="text" class="w375">
+                    <button type="button" class="btn">아이디 중복 체크</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">비밀번호 <span>*</span></th>
+                <td>
+                  <div class="find-id">
+                    <input type="text" class="w375">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">비밀번호 <span>*</span></th>
+                <td>
+                  <div class="find-id">
+                    <input type="text" class="w375">
+                    <button type="button" class="btn">저장</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">소속 <span>*</span></th>
+                <td>
+                  <input type="text" class="w375">
+                  <span class="text-info col">8자 이상 영문 대문자/영문 소문자/숫자/특수문자 중 3가지 이상 조합하여 입력해주세요.</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">이메일주소 <span>*</span></th>
+                <td>
+                  <input type="text" class="w375">
+                  <div class="check-box">
+                    <input id="emailNotice" type="checkbox">
+                    <label for="emailNotice">메일 알림 받기</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">비밀번호 <span>*</span></th>
+                <td>
+                  <button type="button" class="btn">비밀번호 재발급</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">권한설정 <span>*</span></th>
+                <td>
+                  <div class="authority">
+                    <div class="area">
+                      <span class="text">등급</span>
+                      <div class="cont">
+                        <div class="check-box">
+                          <input id="authority06_01" type="checkbox">
+                          <label for="authority06_01">관리자</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority06_02" type="checkbox">
+                          <label for="authority06_02">사용자</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area">
+                      <span class="text">메뉴</span>
+                      <div class="cont">
+                        <div class="check-box">
+                          <input id="authority01_01" type="checkbox">
+                          <label for="authority01_01">전체 선택</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area">
+                      <span class="text">프로젝트 관리</span>
+                      <div class="cont">
+                        <div class="check-box">
+                          <input id="authority02_01" type="checkbox">
+                          <label for="authority02_01">프로젝트 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority02_02" type="checkbox">
+                          <label for="authority02_02">프로젝트 리스트 관리</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area">
+                      <span class="text">게시판 관리</span>
+                      <div class="cont">
+                        <div class="check-box">
+                          <input id="authority03_01" type="checkbox">
+                          <label for="authority03_01">이사회 진행사항 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_02" type="checkbox">
+                          <label for="authority03_02">위원회 운영내역 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_03" type="checkbox">
+                          <label for="authority03_03">뉴스 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_04" type="checkbox">
+                          <label for="authority03_04">실적보고서 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_05" type="checkbox">
+                          <label for="authority03_05">ESG 공시관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_06" type="checkbox">
+                          <label for="authority03_06">공시 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_07" type="checkbox">
+                          <label for="authority03_07">수상실적 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_08" type="checkbox">
+                          <label for="authority03_08">사회공헌 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_09" type="checkbox">
+                          <label for="authority03_09">직무소개 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_10" type="checkbox">
+                          <label for="authority03_10">채용공고 관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority03_11" type="checkbox">
+                          <label for="authority03_11">제보 관리</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area">
+                      <span class="text">고객상담 관리</span>
+                      <div class="cont">
+                        <div class="check-box">
+                          <input id="authority04_01" type="checkbox">
+                          <label for="authority04_01">분양/계약</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority04_02" type="checkbox">
+                          <label for="authority04_02">AS/하자</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority04_03" type="checkbox">
+                          <label for="authority04_03">수주상담</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority04_04" type="checkbox">
+                          <label for="authority04_04">협력회사</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority04_05" type="checkbox">
+                          <label for="authority04_05">일반문의</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area">
+                      <span class="text">사이트 관리</span>
+                      <div class="cont">
+                        <div class="check-box">
+                          <input id="authority05_01" type="checkbox">
+                          <label for="authority05_01">메인 키비주얼/메세지관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority05_02" type="checkbox">
+                          <label for="authority05_02">정보관리</label>
+                        </div>
+                        <div class="check-box">
+                          <input id="authority05_03" type="checkbox">
+                          <label for="authority05_03">메인 팝업 관리</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">상담자 정보</th>
+                <td>
+                  <div class="view-box">
+                    <ul>
+                      <li>구분 : <span>분양/계약</span></li>
+                      <li>작성자 : <span>홍길동</span></li>
+                      <li>E-mail : <span>hongildong@naver.com</span></li>
+                      <li>전화번호 : <span>010-3333-3333</span></li>
+                      <li>휴대폰 : <span>010-3333-3333</span></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">사업 개요</th>
+                <td>
+                  <div class="view-box">
+                    <ul>
+                      <li>공사위치(주소) : <span>서울시 동작구 0000</span></li>
+                      <li>지역지구 : <span>동작구</span></li>
+                      <li>연면적 : <span>999㎡</span></li>
+                      <li>대지면적 : <span>999㎡</span></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">상담 내용</th>
+                <td>
+                  <div class="view-box">
+                    <ul>
+                      <li>제목 : <span>빌리브 계약 문의합니다</span></li>
+                      <li>내용 : <span>빌리브 00 분양계획이 궁금합니다. 일정이나 세부계획이 나온게 있을까요?</span></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">작성자 정보</th>
+                <td>
+                  <div class="view-box">
+                    <ul>
+                      <li>작성자 : <span>홍길동</span></li>
+                      <li>작성자소속 : <span>신세계건설협력회사</span></li>
+                      <li>전화번호 : <span>010-3333-3333</span></li>
+                      <li>휴대폰 : <span>010-3333-3333</span></li>
+                      <li>E-mail : <span>hongildong@naver.com</span></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">제보 내용</th>
+                <td>
+                  <div class="view-box">
+                    <ul>
+                      <li>제보대상자 : <span>김신세</span> ᅵ <span>마케팅팀</span></li>
+                      <li>구분 : <span>신세계건설협력회사</span></li>
+                      <li>제목 : <span>비리를 고발합니다.</span></li>
+                      <li>내용 : <span>000의 비리를 고발합니다. 20**년부터 20**년까지 000의 비리를 고발합니다. 20**년부터 20**년까지 000의 비리를 고발합니다. 20**년부터 20**년까지 000의 비리를 고발합니다. 20**년부터 20**년까지</span></li>
+                      <li>파일첨부 : <a href="#" class="file">첨부파일명.pdf</a></li>
+                      <li>결과통보 : <span>Y</span></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+            <!-- 사이트 관리 > 정보관리 -->
+            <table class="tbl">
+              <colgroup>
+                <col style="width:20%;">
+                <col style="width:9%;">
+                <col style="width:71%;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <th scope="row">메인 프로젝트 수치</th>
+                <td colspan="2">
+                  <ul class="list-admin">
+                    <li>
+                      <span>주거시설</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>건설시설</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>레저시설</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>토목시설</span>
+                      <input type="text">
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주거시설 프로젝트 세부 수치</th>
+                <td colspan="2">
+                  <ul class="list-admin">
+                    <li>
+                      <span>총 시공년수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>프로젝트 수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>총 공사비</span>
+                      <input type="text">
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">건축시설 프로젝트 세부 수치</th>
+                <td colspan="2">
+                  <ul class="list-admin">
+                    <li>
+                      <span>총 시공년수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>프로젝트 수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>총 공사비</span>
+                      <input type="text">
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan=2">레저사업 프로젝트 세부 수치</th>
+                <th scope="row" class="ft-s">골프장</th>
+                <td>
+                  <ul class="list-admin">
+                    <li>
+                      <span>총 운영년수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>운영사업장 수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>총 규모</span>
+                      <input type="text">
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="ft-s">아쿠아필드</th>
+                <td>
+                  <ul class="list-admin">
+                    <li>
+                      <span>총 운영년수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>운영사업장 수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>총 규모</span>
+                      <input type="text">
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">토목시설 프로젝트 세부 수치</th>
+                <td colspan="2">
+                  <ul class="list-admin">
+                    <li>
+                      <span>총 시공년수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>프로젝트 수</span>
+                      <input type="text">
+                    </li>
+                    <li>
+                      <span>총 공사비</span>
+                      <input type="text">
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- // 사이트 관리 > 정보관리 -->
+
+            <div class="btn-wrap">
+              <div class="right">
+                <button type="button" class="btn-primary">검색</button>
+              </div>
+            </div>
+
+            <!-- 게시물 있을때 -->
+            <div class="search-total">총 <span>123</span>건 / 검색결과 <span>123</span>건</div>
+            <table class="tbl-list">
+              <colgroup>
+                <col style="width:6%;">
+                <col style="width:8%;">
+                <col style="width:8%;">
+                <col style="width:12%;">
+                <col style="width:13%;">
+                <col style="width:24%;">
+                <col style="width:8%;">
+                <col style="width:8%;">
+                <col style="width:13%;">
+              </colgroup>
+              <thead>
+              <tr>
+                <th scope="col">
+                  <div class="check-box">
+                    <input type="checkbox">
+                  </div>
+                </th>
+                <th scope="col">번호</th>
+                <th scope="col">지역</th>
+                <th scope="col">사업분야</th>
+                <th scope="col">구분</th>
+                <th scope="col">프로젝트명</th>
+                <th scope="col">상단 메인<br>지정여부</th>
+                <th scope="col">노출여부</th>
+                <th scope="col">등록일</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <div class="check-box">
+                    <input type="checkbox">
+                  </div>
+                </td>
+                <td>123</td>
+                <td>충청</td>
+                <td>
+                  <div class="select-box">
+                    <select>
+                      <option>샘플샘플샘플</option>
+                    </select>
+                  </div>
+                </td>
+                <td>상업시설</td>
+                <td class="subject"><a href="#">스타필드 안성</a></td>
+                <td>Y</td>
+                <td>비공개</td>
+                <td>2021.07.07</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <!-- paging -->
+            <div class="paging">
+              <button type="button" class="paging-first" readonly><span class="blind">처음</span></button>
+              <button type="button" class="paging-prev" readonly><span class="blind">이전</span></button>
+              <div class="paging-list">
+                <a href="#" class="active" aria-current="page">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </div>
+              <button type="button" class="paging-next"><span class="blind">다음</span></button>
+              <button type="button" class="paging-last"><span class="blind">마지막</span></button>
+            </div>
+            <!-- // paging -->
+            <!-- // 게시물 있을때 -->
+
+            <!-- 게시물 없을때 -->
+            <div class="notice-none">
+              등록된 게시물이 없습니다.
+            </div>
+            <!-- // 게시물 없을때 -->
+
+            <!-- 버튼 좌우 정렬 -->
+            <div class="btn-wrap">
+              <div class="left">
+                <button type="button" class="btn btn-secondary">삭제</button>
+                <button type="button" class="btn btn-secondary">계정활성화</button>
+              </div>
+              <div class="right">
+                <button type="button" class="btn btn-secondary">수정</button>
+                <button type="button" class="btn btn-primary">등록</button>
+                <button type="button" class="btn btn-primary">다운로드</button>
+              </div>
+            </div>
+            <!-- // 버튼 좌우 정렬 -->
+
+            <!-- 버튼 좌측 정렬 -->
+            <div class="btn-wrap">
+              <div class="left">
+                <button type="button" class="btn btn-secondary">삭제</button>
+              </div>
+            </div>
+            <!-- // 버튼 좌측 정렬 -->
+
+            <!-- 버튼 우측 정렬 -->
+            <div class="btn-wrap">
+              <div class="right">
+                <button type="button" class="btn btn-secondary">수정</button>
+                <button type="button" class="btn btn-primary">등록</button>
+              </div>
+            </div>
+            <!-- // 버튼 우측 정렬 -->
+
+            <!-- 수정이력 -->
+            <div class="modify-history">
+              <em>수정이력</em>
+              <ul>
+                <li>최초작성 : <span>홍길동</span> <span>2021.07.16 19:42</span></li>
+                <li>최종수정 : <span>김신세</span> <span>2021.07.16 20:11</span></li>
+              </ul>
+            </div>
+            <!-- // 수정이력 -->
+          </div>
+          <!-- // Contents -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    ($ => {
+      $(document).ready(function () {
+        // datepicker
+        $('.datepicker').datepicker()
+
+        // attach file
+        $('.attach-file').on('change',function(){
+          let fileName = $(this).val().replace(/C:\\fakepath\\/i, '')
+          $(this).siblings('.attach-text').val(fileName)
+        })
+      })
+    })(window.jQuery)
+  </script>
+</body>
+</html>

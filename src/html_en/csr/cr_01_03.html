@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../inc/meta.html',{
+  "pagetitle": "SHINSEGAE E&C : Corporate Social Responsibility"
+  })
+</head>
+
+<body class="en">
+  <div class="wrap">
+    @@include('../inc/header.html')
+
+    <!--: Start #contents -->
+    <div class="contents">
+      <div class="sub-content c-cr03 section header-black">
+        <div class="inner">
+          <div class="sub-header">
+            <em class="sg-text-06">Corporate Social Responsibility</em>
+            <p class="sg-text-03">As a local community member, Shinsegae E&C demonstrates a sharing and win-win spirit by leveraging the essence of our business when <span>seeking collaboration with other companies, supporting the underprivileged, and conducting environmental campaigns.</span></p>
+            <p class="sg-text-09">In particular, we are offering our employees to voluntarily participate in the cafeteria volunteer activity while also encouraging our employees to participate in CSR activities with their families.</p>
+          </div>
+          <div class="flex-box">
+            <div class="inner-cell">
+              <h3 class="sg-text-04">CSR in 2022<br>
+                <span>KRW 500 Million</span></h3>
+            </div>
+            <div class="inner-cell type">
+              <picture>
+                <source media="(max-width: 1024px)" srcset="/images/en/csr/img-cr3-01-m.png">
+                <img src="/images/en/csr/img-cr3-01.png" alt="">
+              </picture>
+            </div>
+          </div>
+          <h3 class="sg-text-04">Key CSR activities</h3>
+          <ul class="list01">
+            <li>
+              <a href="/html_en/csr/cr_01_03_dt01.html">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="/images/csr/img-cr3-list01-m.png">
+                  <img src="/images/csr/img-cr3-list01.png" alt="">
+                </picture>
+                <em>Remodeling of the Hope Library of Toys</em>
+                <span>Hope delivery campaign</span>
+              </a>
+            </li>
+            <li>
+              <a href="/html/csr/cr_01_03_dt02.html">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="/images/csr/img-cr3-list02-m.png">
+                  <img src="/images/csr/img-cr3-list02.png" alt="">
+                </picture>
+                <em>Repairing of the Love House</em>
+                <span>Support for the underprivileged</span>
+              </a>
+            </li>
+            <li>
+              <a href="/html/csr/cr_01_03_dt03.html">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="/images/csr/img-cr3-list03-m.png">
+                  <img src="/images/csr/img-cr3-list03.png" alt="">
+                </picture>
+                <em>Hanam-si youth complex culture center support</em>
+                <span>Community contribution</span>
+              </a>
+            </li>
+            <li>
+              <a href="/html/csr/cr_01_03_dt04.html">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="/images/csr/img-cr3-list04-m.png">
+                  <img src="/images/csr/img-cr3-list04.png" alt="">
+                </picture>
+                <em>Youth/education support and support for independence</em>
+                <span>Support for the underprivileged</span>
+              </a>
+            </li>
+            <li>
+              <a href="/html/csr/cr_01_03_dt05.html">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="/images/csr/img-cr3-list05-m.png">
+                  <img src="/images/csr/img-cr3-list05.png" alt="">
+                </picture>
+                <em>Support for the underprivileged</em>
+                <span>Support for the underprivileged</span>
+              </a>
+            </li>
+            <li>
+              <a href="/html/csr/cr_01_03_dt06.html">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="/images/csr/img-cr3-list06-m.png">
+                  <img src="/images/csr/img-cr3-list06.png" alt="">
+                </picture>
+                <em>Sungkyunkwan culture and tomb keeper</em>
+                <span>Cultural heritage protection activities</span>
+              </a>
+            </li>
+            <li>
+              <a href="/html/csr/cr_01_03_dt07.html">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="/images/csr/img-cr3-list07-m.png">
+                  <img src="/images/csr/img-cr3-list07.png" alt="">
+                </picture>
+                <em>Urban gardening</em>
+                <span>Eco-friendly campaign</span>
+              </a>
+            </li>
+          </ul>
+          <div class="btn-wrap">
+            <button type="button" class="btn btn-secondary more"><span>Learn more CSR activities</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--: End #contents -->
+    @@include('../inc/footer.html')
+  </div>
+
+  <!-- common, plugins, app -->
+  <script type="text/javascript" src="/js/common.js"></script>
+  <script type="text/javascript" src="/js/plugins.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+
+  <!-- components -->
+  <script>
+    ($ => {
+      $.depth1Index = 2
+      $.depth2Index = 2
+
+      $(document).ready(function () {
+        let $list = $('.sub-content.section .list01 > li')
+        let list = []
+        let listIndex = 0
+
+        $list.each(function (index) {
+          list[index] = $(this)
+        })
+
+        $('.btn.more').on('click', function (e) {
+          listIndex++
+
+          for (let i = 0; i < 6; ++i) {
+            $list.eq(listIndex * 6 + i).show()
+            if (listIndex * 6 + i >= list.length - 1) {
+              $(this).hide()
+            }
+          }
+        })
+      })
+    })(window.jQuery)
+  </script>
+</body>
+</html>

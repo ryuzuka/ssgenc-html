@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@function vw($target) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+// Media queries breakpoints
+$mq-pc: 1920px;
+$mq-tb: 1024px;
+$mq-mo: 767px;
+
+// breakpoint
+@mixin mobile {
+  @media all and (max-width:#{$mq-tb}) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media all and (min-width: #{$mq-mo + 1px}) and (max-width: #{$mq-tb}) {
+    @content
+  }
+}
+
+// clear floating
+@mixin clearfix {
+  &:after{
+    display:block;
+    clear:both;
+    content:'';
+  }
+}
+
+@mixin after-position($t, $l, $w, $h) {
+  position: absolute;
+  top: $t;
+  left: $l;
+  width: $w;
+  height: $h;
+  content: '';
+}
+
+// border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// box-sizing
+@mixin box-sizing($type:border-box) {
+  -webkit-box-sizing:$type;
+  box-sizing:$type;
+}
+
+// vertical middle
+@mixin v-middle {
+  overflow: hidden;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+
+// transform
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+@mixin transformOrigin($transforms) {
+  transform-origin: $transforms;
+}
+
+//ellipse
+@mixin ellipse($line) {
+  @if ($line > 1) {
+    display:-webkit-box;
+    white-space:normal;
+    word-wrap:break-word;
+    -webkit-line-clamp:$line;
+    -webkit-box-orient:vertical;
+  } @else {
+    display:block;
+    white-space:nowrap;
+  }
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+// flex setting
+@mixin flexbox {
+  display:flex;
+}
+@mixin set-middle {
+  @include flexbox;
+  align-items: center;
+}
+
+// position
+@mixin position($x, $y) {
+  position: absolute;
+  top: $x;
+  left: $y;
+}
+
+// button
+@mixin btn($color, $type:solid, $hover:'') {
+  @if $type == line {
+    border-color:$color;
+    background-color:#fff;
+    color:$color;
+    @if $hover == '' {
+      &:hover {
+        background-color:#fff;
+      }
+    } @else {
+      &:hover {
+        background-color:$hover;
+      }
+    }
+  } @else {
+    border-color:$color;
+    background-color:$color;
+    color:#fff;
+    &:hover {
+      border-color:$hover;
+      background-color:$hover;
+    }
+  }
+}
