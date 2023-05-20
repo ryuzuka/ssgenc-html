@@ -246,45 +246,67 @@
               <img src="/images/csr/graph-cr5-01.png" alt="재해현황 그래프 정보">
             </picture>
           </div>
-          <table class="tbl-list">
-            <caption><span class="blind">재해현황 정보</span></caption>
-            <colgroup>
-              <col class="width01">
-              <col class="width02">
-              <col class="width02">
-              <col class="width02">
-              <col class="width02">
-              <col class="width02">
-            </colgroup>
-            <thead>
-            <tr>
-              <th scope="col">구분</th>
-              <th scope="col">2017</th>
-              <th scope="col">2018</th>
-              <th scope="col">2019</th>
-              <th scope="col">2020</th>
-              <th scope="col">2021</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th scope="row">신세계건설</th>
-              <td>3.52</td>
-              <td>1.85</td>
-              <td>0.28</td>
-              <td>0.00</td>
-              <td>0.00</td>
-            </tr>
-            <tr>
-              <th scope="row">건설업 평균</th>
-              <td>2.18</td>
-              <td>2.15</td>
-              <td>2.01</td>
-              <td>2.5</td>
-              <td>2.2</td>
-            </tr>
-            </tbody>
-          </table>
+          <div class="scroll-box">
+            <table class="tbl-list">
+              <caption><span class="blind">재해현황 정보</span></caption>
+              <colgroup>
+                <col style="width:15%;">
+                <col style="width:15%;">
+                <col style="width:14%;">
+                <col style="width:14%;">
+                <col style="width:14%;">
+                <col style="width:14%;">
+                <col style="width:14%;">
+              </colgroup>
+              <thead>
+              <tr>
+                <th scope="col" colspan="2">구분</th>
+                <th scope="col">2017</th>
+                <th scope="col">2018</th>
+                <th scope="col">2019</th>
+                <th scope="col">2020</th>
+                <th scope="col">2021</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row" rowspan="2">사망자</th>
+                <th scope="row">임직원</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">협력업체</th>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="2">만인율</th>
+                <th scope="row">신세계건설</th>
+                <td>3.52</td>
+                <td>1.85</td>
+                <td>0.28</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <th scope="row">건설업 평균</th>
+                <td>2.18</td>
+                <td>2.15</td>
+                <td>2.01</td>
+                <td>2.5</td>
+                <td>2.2</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sg-text-09">※ 당사 공동도급 회원사 현장 사망자 제외</p>
         </div>
       </div>
     </div>
