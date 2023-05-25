@@ -1900,6 +1900,19 @@
         }
       }
     }
+    .certification.greenhousegas {
+      dt {
+        max-width: 15%;
+        border-bottom: 0px solid #000;
+      }
+      dd {
+        border-top: 0px solid #ddd;
+        border-bottom: 0px solid #ddd;
+        &:last-child {
+          background-color: #fff
+        }
+      }
+    }
     .accordion {
       margin-top:6rem;
       &-content {
