@@ -2174,6 +2174,23 @@
     .img-wrap {
       margin-top:3rem;
     }
+    .unit-box {
+      display:block;
+      margin-top:6rem;
+      & + .tbl-list {
+        margin-top:1rem;
+      }
+      .sg-text-06 {
+
+      }
+      .txt {
+        display:block;
+        font-size:1.4rem;
+        line-height:2.3rem;
+        letter-spacing:-.07rem;
+        text-align:right;
+      }
+    }
   }
   .c-cr07 {
     .sg-text-04 {

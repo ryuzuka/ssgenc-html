@@ -400,6 +400,9 @@
       }
       td {
         color:$default-c5;
+        &.center {
+          text-align:center;
+        }
       }
     }
     &.align-right {
