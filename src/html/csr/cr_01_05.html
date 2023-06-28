@@ -250,13 +250,14 @@
             <table class="tbl-list">
               <caption><span class="blind">재해현황 정보</span></caption>
               <colgroup>
-                <col style="width:15%;">
-                <col style="width:15%;">
                 <col style="width:14%;">
                 <col style="width:14%;">
-                <col style="width:14%;">
-                <col style="width:14%;">
-                <col style="width:14%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
               </colgroup>
               <thead>
               <tr>
@@ -266,12 +267,14 @@
                 <th scope="col">2019</th>
                 <th scope="col">2020</th>
                 <th scope="col">2021</th>
+                <th scope="col">2022</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                 <th scope="row" rowspan="2">사망자</th>
                 <th scope="row">임직원</th>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -285,6 +288,7 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
+                <td>0</td>
               </tr>
               <tr>
                 <th scope="row" rowspan="2">만인율</th>
@@ -292,6 +296,7 @@
                 <td>3.52</td>
                 <td>1.85</td>
                 <td>0.28</td>
+                <td>0.00</td>
                 <td>0.00</td>
                 <td>0.00</td>
               </tr>
@@ -302,6 +307,7 @@
                 <td>2.01</td>
                 <td>2.5</td>
                 <td>2.2</td>
+                <td>2.06</td>
               </tr>
               </tbody>
             </table>
