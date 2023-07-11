@@ -39,9 +39,9 @@
               <th scope="col">평가대상</th>
               <th scope="col">평가회사</th>
               <th scope="col">구분</th>
+              <th scope="col">2023년</th>
               <th scope="col">2022년</th>
               <th scope="col">2021년</th>
-              <th scope="col">2020년</th>
             </tr>
             </thead>
             <tbody>
@@ -55,7 +55,7 @@
             </tr>
             <tr>
               <td>하반기</td>
-              <td>A</td>
+              <td></td>
               <td>A</td>
               <td>A</td>
             </tr>
@@ -68,7 +68,7 @@
             </tr>
             <tr>
               <td>하반기</td>
-              <td>A</td>
+              <td></td>
               <td>A</td>
               <td>A</td>
             </tr>
@@ -82,7 +82,7 @@
             </tr>
             <tr>
               <td>하반기</td>
-              <td>A2</td>
+              <td></td>
               <td>A2</td>
               <td>A2</td>
             </tr>
@@ -95,7 +95,7 @@
             </tr>
             <tr>
               <td>하반기</td>
-              <td>A2</td>
+              <td></td>
               <td>A2</td>
               <td>A2</td>
             </tr>
